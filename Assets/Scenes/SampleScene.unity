@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.17283964, g: 0.21598999, b: 0.29794145, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -209,14 +209,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.6626884, y: -0.18830115, z: 0.1775668, w: 0.7027495}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 86.639, y: -30, z: 0}
 --- !u!1 &757491757 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 492072643464935406, guid: cf34034e2ba0059398245c7224e170a7, type: 3}
@@ -239,6 +239,9 @@ MonoBehaviour:
   nbEyesState: 0
   translationAmplitude: 0
   xTranslationScreenCurrent: 0
+  translationOrder: 0
+  translationSpeed: 0
+  onMovement: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,14 +319,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.06, y: 3.5277398, z: 7.9769115}
+  m_LocalRotation: {x: -0, y: -0.9981906, z: 0.060129195, w: 0}
+  m_LocalPosition: {x: 0.06, y: 5.38, z: 5.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1337243567}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.894, y: -180, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,7 +339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc609c708217e940b4f8a02a90ef8a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
   robot: {fileID: 0}
   camera_transform: {fileID: 0}
   robot_transform: {fileID: 0}
@@ -370,7 +372,7 @@ MonoBehaviour:
   nbNeckState: 0
   rotationAmplitude: 0
   yAngleHeadCurrent: 0
-  rotation: 0
+  rotationOrder: 0
   onMovement: 0
   rotationSpeed: 0
 --- !u!95 &1362672834
