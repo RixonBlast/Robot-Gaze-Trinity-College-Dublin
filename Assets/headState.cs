@@ -54,6 +54,7 @@ public class headState : MonoBehaviour
     void Update()
     {
         // Check if the user has pressed a key corresponding to a specific neck state
+        /*
         if (Input.GetKeyDown("6"))
         {
             smoothHeadMovement(0);
@@ -66,6 +67,7 @@ public class headState : MonoBehaviour
         {
             smoothHeadMovement(2);
         }
+        */
 
         // If the head is currently in motion, rotate it towards the desired angle
         if (onMovement)

@@ -34,7 +34,7 @@ public class eyesState : MonoBehaviour
         screenEyes_material = GetComponent<Renderer>().materials[0];
 
         // Set the number of eye states
-        nbEyesState = 5;
+        nbEyesState = 10;
 
         // Set the translation amplitude of the eyes
         translationAmplitude = 0.3f;
@@ -71,6 +71,26 @@ public class eyesState : MonoBehaviour
         else if (Input.GetKeyDown("5"))
         {
             smoothEyesMovement(4);
+        }
+        else if (Input.GetKeyDown("6"))
+        {
+            smoothEyesMovement(5);
+        }
+        else if (Input.GetKeyDown("7"))
+        {
+            smoothEyesMovement(6);
+        }
+        else if (Input.GetKeyDown("8"))
+        {
+            smoothEyesMovement(7);
+        }
+        else if (Input.GetKeyDown("9"))
+        {
+            smoothEyesMovement(8);
+        }
+        else if (Input.GetKeyDown("0"))
+        {
+            smoothEyesMovement(9);
         }
 
         if (onMovement)

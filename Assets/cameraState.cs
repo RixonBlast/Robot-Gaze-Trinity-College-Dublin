@@ -13,6 +13,7 @@ public class cameraState : MonoBehaviour
 
     // Vector3 for the y axis
     Vector3 yAxis;
+    Vector3 robotSize;
 
     // Number of camera states
     public int nbCameraState;
@@ -24,6 +25,7 @@ public class cameraState : MonoBehaviour
     public float angleViewAmplitude;
     // Current y angle of the camera
     public float yAngleCameraCurrent;
+    public float cameraDistance;
 
     // Start is called before the first frame update
     void Start()
@@ -37,16 +39,22 @@ public class cameraState : MonoBehaviour
 
         // Initialize the yAxis vector
         yAxis = new Vector3(0,1,0);
+        robotSize = robot.GetComponent<Collider>().bounds.size;
 
         // Initialize the number of camera states and the angle of view amplitude
-        nbCameraState = 3;
-        angleViewAmplitude = 90;
+        nbCameraState = 37;
+        angleViewAmplitude = 180;
+
+        cameraDistance = 13;
 
         // Initialize the current y angle of the camera
         yAngleCameraCurrent = 0;
 
         // Initialize the test variable
-        test=1;
+        test=18;
+
+        camera_transform.Translate((robot_transform.forward)*cameraDistance+robot_transform.position-camera_transform.position + new Vector3(0,robotSize.y,0),Space.World);
+
 
     }
 
@@ -54,9 +62,15 @@ public class cameraState : MonoBehaviour
     void Update()
     {     
         // Call the cameraMovement function with an argument of 2 when the test variable is 1
-        if (test==1){
-            cameraMovement(2);
-            test=0;
+        if (Input.GetKeyDown("right")){
+            test+=1;
+            print(test);
+            cameraMovement(test);
+        }
+        if (Input.GetKeyDown("left")){
+            test-=1;
+            print(test);
+            cameraMovement(test);
         }
     }
 
