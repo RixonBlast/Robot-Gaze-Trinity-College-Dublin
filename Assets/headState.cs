@@ -10,6 +10,8 @@ public class headState : MonoBehaviour
     // The number of possible neck states (positions)
     public int nbNeckState;
 
+    public int headCurrentState;
+
     // The maximum angle of rotation that the head can achieve
     public float rotationAmplitude;
 
@@ -19,11 +21,14 @@ public class headState : MonoBehaviour
     // The desired angle of the head (based on the chosen neck state)
     public float rotationOrder;
 
+    // The speed of rotation of the head
+    public float rotationSpeed;
+
     // A flag indicating whether the head is currently in motion
     public bool onMovement;
 
-    // The speed of rotation of the head
-    public float rotationSpeed;
+    //A flag to allow headmovement
+    public bool headMovementEnabled;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +40,7 @@ public class headState : MonoBehaviour
         yAngleHeadCurrent = 0;
 
         // Set the number of neck states to 3 (you can change this value)
-        nbNeckState = 3;
+        nbNeckState = 5;
 
         // Set the maximum angle of rotation to 90 degrees (you can change this value)
         rotationAmplitude = 90;
@@ -46,13 +51,42 @@ public class headState : MonoBehaviour
         // Set the speed of rotation of the head to 50 degrees per second (you can change this value)
         rotationSpeed = 50f;
 
+        setHeadMovementEnabled(false);
         // Uncomment the following line if you want to start with a specific neck state
         //smoothHeadMovement(2);
+
+        headCurrentState = nbNeckState / 2;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (headMovementEnabled)
+        {
+            if (Input.GetKeyDown("a"))
+            {   
+                headCurrentState += 1;
+                if (smoothHeadMovement(headCurrentState))
+                {
+                }
+                else 
+                {
+                    headCurrentState -= 1;
+                }
+            }
+            else if (Input.GetKeyDown("z"))
+            {
+                headCurrentState -= 1;
+                if (smoothHeadMovement(headCurrentState))
+                {
+                }
+                else 
+                {
+                    headCurrentState += 1;
+                }
+            }
+        }
         // Check if the user has pressed a key corresponding to a specific neck state
         /*
         if (Input.GetKeyDown("6"))
@@ -69,6 +103,7 @@ public class headState : MonoBehaviour
         }
         */
 
+        
         // If the head is currently in motion, rotate it towards the desired angle
         if (onMovement)
         {
@@ -88,9 +123,9 @@ public class headState : MonoBehaviour
             else
             {
                 onMovement = false;
-                print("End of movement!!");
             }
         }
+        
     }
 
     public void setHeadState(int neckState)
@@ -116,12 +151,13 @@ public class headState : MonoBehaviour
         }
     }
 
-    void smoothHeadMovement(int neckState)
+    bool smoothHeadMovement(int neckState)
     {
         // Check if neckState is within valid range
         if (neckState < 0 || neckState > (nbNeckState - 1))
         {
             print("neckState exceeding limits, should be between 0 and " + (nbNeckState - 1) + " but is " + neckState);
+            return false;
         }
         else
         {
@@ -130,6 +166,13 @@ public class headState : MonoBehaviour
 
             // Set the flag for head movement to start
             onMovement = true;
+            return true;
         }
     }
+
+    public void setHeadMovementEnabled(bool value)
+    {
+        headMovementEnabled = value;
+    }
 }
+

@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cameraState : MonoBehaviour
+public class cameraHandler : MonoBehaviour
 {
     // Reference to the robot GameObject
     public GameObject robot;
+
+    public GameObject gameManager;
 
     // Reference to the camera and robot transforms
     public Transform camera_transform;
     public Transform robot_transform;
 
     // Vector3 for the y axis
-    Vector3 yAxis;
-    Vector3 robotSize;
+    Vector3 humanSize;
 
     // Number of camera states
     public int nbCameraState;
@@ -27,19 +28,24 @@ public class cameraState : MonoBehaviour
     public float yAngleCameraCurrent;
     public float cameraDistance;
 
+    public float rotationSpeed;
+
+    public float currentCameraAngle;
+
+    public bool cameraMovementEnabled;
     // Start is called before the first frame update
     void Start()
     {
         // Find the robot GameObject
         robot = GameObject.Find("Robot_stevie");
+        gameManager = GameObject.Find("Game Manager");
 
         // Get the camera and robot transforms
         camera_transform = GetComponent<Transform>();
         robot_transform = robot.GetComponent<Transform>();
 
         // Initialize the yAxis vector
-        yAxis = new Vector3(0,1,0);
-        robotSize = robot.GetComponent<Collider>().bounds.size;
+        humanSize = new Vector3(0,6.9f,0);
 
         // Initialize the number of camera states and the angle of view amplitude
         nbCameraState = 37;
@@ -50,31 +56,30 @@ public class cameraState : MonoBehaviour
         // Initialize the current y angle of the camera
         yAngleCameraCurrent = 0;
 
+
+
+        rotationSpeed = 100;
+
         // Initialize the test variable
         test=18;
 
-        camera_transform.Translate((robot_transform.forward)*cameraDistance+robot_transform.position-camera_transform.position + new Vector3(0,robotSize.y,0),Space.World);
+        currentCameraAngle = 90;
 
-
+        camera_transform.Translate((robot_transform.forward)*cameraDistance+robot_transform.position-camera_transform.position + humanSize,Space.World);
+        print(robot.GetComponent<Collider>().bounds.size);
+        setCameraMovementEnabled(false) ;                                                                                                                                                                                                                                                                  
     }
 
     // Update is called once per frame
     void Update()
-    {     
-        // Call the cameraMovement function with an argument of 2 when the test variable is 1
-        if (Input.GetKeyDown("right")){
-            test+=1;
-            print(test);
-            cameraMovement(test);
-        }
-        if (Input.GetKeyDown("left")){
-            test-=1;
-            print(test);
-            cameraMovement(test);
-        }
+    {   
+        
+       
+
     }
 
     // Function to move the camera to a specified camera state
+    
     public void cameraMovement(int cameraState)
     {
         // Check if the camera state is within the limits
@@ -92,7 +97,18 @@ public class cameraState : MonoBehaviour
             // Update the current y angle of the camera
             yAngleCameraCurrent = rotationOrder;
             // Rotate the camera around the robot using the calculated rotation
-            camera_transform.RotateAround(robot_transform.position,yAxis,rotation);
+            camera_transform.RotateAround(robot_transform.position,robot_transform.up,rotation);
         }
+    }
+
+    public void setCameraAngle(float angle)
+    {
+        camera_transform.RotateAround(robot_transform.position,robot_transform.up,-(angle-currentCameraAngle));
+        currentCameraAngle = angle;
+    }
+
+    public void setCameraMovementEnabled(bool value)
+    {
+        cameraMovementEnabled = value;
     }
 }
