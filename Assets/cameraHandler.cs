@@ -105,6 +105,7 @@ public class cameraHandler : MonoBehaviour
     {
         camera_transform.RotateAround(robot_transform.position,robot_transform.up,-(angle-currentCameraAngle));
         currentCameraAngle = angle;
+        print("CAMERA TOURNE");
     }
 
     public void setCameraMovementEnabled(bool value)

@@ -22,6 +22,8 @@ public class submitButtonSliderHandler : MonoBehaviour, IPointerEnterHandler, IP
 
     public bool buttonHovered;
 
+    public bool readyToClick;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,30 +42,38 @@ public class submitButtonSliderHandler : MonoBehaviour, IPointerEnterHandler, IP
         wavesEnabled = false;
 
         buttonHovered = false;
+
+        readyToClick = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (buttonHovered & Input.GetMouseButton(0))
+        if (!buttonHovered || !Input.GetMouseButton(0))
         {
-            print("Pressed!");
+            if (anchoredPosition.x > -315 & !canvasHandler.submitButtonPressed)
+            {
+                submitText.text = "Submit";
+                anchoredPosition.x -= Time.deltaTime * 450f;
+            }
+
+            if (buttonHovered)
+            {
+                readyToClick = true;
+            }
+        }
+        else if (readyToClick)
+        {
             if (anchoredPosition.x < -15)
             {
-                anchoredPosition.x += Time.deltaTime * 1372.5f;
+                anchoredPosition.x += Time.deltaTime * 450f;
                 submitText.text = "Submitting...";
             }
             else
             {
+                print("Submit button selected");
                 canvasHandler.submitButtonPressed = true;
-            }
-        }
-        else
-        {
-            if (anchoredPosition.x > -930 & !canvasHandler.submitButtonPressed)
-            {
-                submitText.text = "Submit";
-                anchoredPosition.x -= Time.deltaTime * 1372.5f;
             }
         }
         
@@ -73,13 +83,12 @@ public class submitButtonSliderHandler : MonoBehaviour, IPointerEnterHandler, IP
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        print("Started the hovering");
         buttonHovered = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        print("Stopped it");
         buttonHovered = false;
+        readyToClick = false;
     }
 }

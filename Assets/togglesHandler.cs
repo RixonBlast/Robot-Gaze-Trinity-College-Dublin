@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class togglesHandler : MonoBehaviour
 {
+    public GameObject button;
+
+    public submitButtonObjectHandler submitButtonHandler;
 
     public Transform currentToggle;
 
-
     public List<Toggle> toggles;
-
-    public Camera currentCam;
 
     public Transform currentObject_transform;
     public Transform parent_transform;
@@ -24,10 +24,15 @@ public class togglesHandler : MonoBehaviour
 
     public Vector3 tmpShift;
 
+    public int lastToggledUp;
+
     // Start is called before the first frame update
     void Start()
     {
 
+        //Submit button initialization
+        button = GameObject.Find("Bot Subcanvas Button/Submit Button Object");
+        submitButtonHandler = button.GetComponent<submitButtonObjectHandler>();
         toggles_transform = GetComponent<Transform>();
 
     /*
@@ -43,6 +48,7 @@ public class togglesHandler : MonoBehaviour
         {
             currentToggle = toggles_transform.GetChild(i);
             toggles.Add(currentToggle.GetComponent<Toggle>());
+            print("ZEEGIZNGNINI");
             //currentToggle.GetChild(2).GetComponent<RawImage>().texture = (RenderTexture)Resources.Load("RenderTexture/RenderTexture"+i);
         }
 
@@ -76,7 +82,7 @@ public class togglesHandler : MonoBehaviour
 
         }
         */
-
+        lastToggledUp = -1;
     }
 
     // Update is called once per frame
@@ -87,16 +93,42 @@ public class togglesHandler : MonoBehaviour
 
     public void toggleUp(int toggle)
     {
-        for (int i = 0;i<toggle; i++)
+        toggles[toggle].SetIsOnWithoutNotify(true);
+        if (lastToggledUp!=-1)
         {
-            toggles[i].SetIsOnWithoutNotify(false);
+            toggles[lastToggledUp].SetIsOnWithoutNotify(false);
+            if (lastToggledUp == toggle)
+            {
+                lastToggledUp=-1;
+                submitButtonHandler.toggleButton(false);
+            }
+            else
+            {
+                lastToggledUp=toggle;
+            }
         }
-
-            toggles[toggle].SetIsOnWithoutNotify(true);
-
-        for (int i = toggle+1;i<toggles_transform.childCount;i++)
+        else
         {
-            toggles[i].SetIsOnWithoutNotify(false);
+            lastToggledUp = toggle;
+            submitButtonHandler.toggleButton(true);
+        }
+    }
+
+    public void appear()
+    {   
+        if (lastToggledUp!=-1)
+        {
+            toggles[lastToggledUp].SetIsOnWithoutNotify(false);
+            lastToggledUp = -1;
+        }
+        setInteractable(false);
+    }
+
+    public void setInteractable(bool value)
+    {
+        for (int i=0;i<7;i++)
+        {
+            toggles[i].interactable = value;
         }
     }
 

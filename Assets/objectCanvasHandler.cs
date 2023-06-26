@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class objectCanvasHandler : MonoBehaviour
 {
+    
+    public submitButtonObjectHandler submitButtonHandler;
+
+    public togglesHandler togglesHandler;
+
+    public objectInstructionHandler instructionHandler;
 
     public RectTransform canvas_rectTransform;
 
@@ -36,6 +42,11 @@ public class objectCanvasHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        submitButtonHandler = GameObject.Find("Bot Subcanvas Button/Submit Button Object").GetComponent<submitButtonObjectHandler>();
+
+        togglesHandler = GameObject.Find("Toggles").GetComponent<togglesHandler>();
+
+        instructionHandler = GameObject.Find("Object Instruction").GetComponent<objectInstructionHandler>();
 
         //part for toggles
         
@@ -73,47 +84,10 @@ public class objectCanvasHandler : MonoBehaviour
 
     public void objectCanvasTransitionIn()
     {
-        //Part for toggles
-        /*
-        for (int i =0;i<parent_transform.childCount;i++)
-        {
+        anim.enabled = true;
 
-            currentObject_transform = parent_transform.GetChild(i).GetComponent<Transform>();
-
-            //currentCam = currentObject_transform.GetChild(1).GetComponent<Camera>();
-            currentCam = GameObject.Find("Main Camera").GetComponent<Camera>();
-
-            currentObject_transform.Translate(tmpShift,Space.World);
-
-            currentCam.targetTexture = renderTexture;
-
-            RenderTexture.active = renderTexture;
-             
-            currentTexture.ReadPixels(new Rect(0,0,256,256),0,0);
-            currentTexture.Apply();
-
-            //currentTexture = (Texture2D)Resources.Load("Texture/left_arrow_off");
-
-            toggles_transform.GetChild(i).GetComponent<Transform>().GetChild(2).GetComponent<RawImage>().texture = currentTexture;
-
-            RenderTexture.active = null;
-            currentCam.targetTexture = null;
-            renderTexture.Release();
-            
-            currentObject_transform.Translate(-tmpShift,Space.World);
-
-        }
-        */
-        /*
-        for (int i = 0; i < 7; i++)
-        {
-            currentObject_transform = parent_transform.GetChild(i);
-            currentObject_transform.Translate(tmpShift,Space.World);
-            currentObject_transform.GetChild(1).GetComponent<Camera>().enabled = false;
-            currentObject_transform.Translate(-tmpShift,Space.World);
-        }
-        */
-        //END of it
+        togglesHandler.appear();
+        submitButtonHandler.appear();
 
         canvas_rectTransform.anchoredPosition = displayPosition;
         objectCanvasTransitionInFinished = false;
@@ -122,6 +96,8 @@ public class objectCanvasHandler : MonoBehaviour
 
     public void objectCanvasTransitionOut()
     {
+        togglesHandler.setInteractable(false);
+        anim.enabled = true;
         objectCanvasTransitionOutFinished = false;
         anim.Play("objectCanvasAnimationOut");
     }
@@ -130,6 +106,8 @@ public class objectCanvasHandler : MonoBehaviour
     {
         objectCanvasTransitionInFinished = true;
         anim.Rebind();
+        anim.enabled = false;
+        togglesHandler.setInteractable(true);
     }
 
     public void onObjectCanvasTransitionOutFinished()
@@ -137,5 +115,6 @@ public class objectCanvasHandler : MonoBehaviour
         canvas_rectTransform.anchoredPosition = hidePosition;
         objectCanvasTransitionOutFinished = true;
         anim.Rebind();
+        anim.enabled = false;
     }
 }

@@ -116,11 +116,58 @@ public class mainCanvasHandler : MonoBehaviour
        instructions1.text = text2;
     }
 
+    public void setText(int numText, String text)
+    {
+        if (numText == 0)
+        {
+            instructions0.text = text;
+        }
+        else
+        {
+            instructions1.text = text;
+        }
+    }
+
+    public void setTextProperties(int numText, float size, TextAlignmentOptions alignment, FontStyles style)
+    {
+        if (numText == 0)
+        {
+            instructions0.fontSize = size;
+            instructions0.alignment = alignment;
+            instructions0.fontStyle = style;
+            //instructions0.anchor = anchor;
+        }
+        else
+        {
+            instructions1.fontSize = size;
+            instructions1.alignment = alignment;
+            instructions1.fontStyle = style;
+            //instructions1.anchor = anchor;
+        }
+    }
+
     public void reverseTexts()
     {
         String tmpString = instructions0.text;
+        float size = instructions0.fontSize;
+        TextAlignmentOptions alignment = instructions0.alignment;
+        FontStyles style = instructions0.fontStyle;
+        //TextAnchor anchor = instructions0.anchor;
+
         instructions0.text = instructions1.text;
         instructions1.text = tmpString;
+
+        instructions0.fontSize = instructions1.fontSize;
+        instructions1.fontSize = size;
+
+        instructions0.alignment = instructions1.alignment;
+        instructions1.alignment = alignment;
+
+        instructions0.fontStyle = instructions1.fontStyle;
+        instructions1.fontStyle = style;
+        
+        //instructions0.anchor = instructions1.anchor;
+        //instructions1.anchor = anchor;
     }
 
     public void textsTranslationRight()

@@ -22,6 +22,7 @@ public class gameManager : MonoBehaviour
     public sliderCanvasHandler sliderCanvasHandler;
     public objectCanvasHandler objectCanvasHandler;
     public sliderHandler slider;
+    public objectInstructionHandler objectInstructionHandler;
 
     public TextMeshProUGUI instructions0;
     public TextMeshProUGUI instructions1;
@@ -55,7 +56,8 @@ public class gameManager : MonoBehaviour
 
     public int objectNb;
     public int state;
-    public int nbTestLeft;
+    public int nbTest;
+    public int testIndex;
 
     public bool bigCanvasTranslatingIn;
     public bool bigCanvasTranslatingOut;
@@ -123,6 +125,9 @@ public class gameManager : MonoBehaviour
 
         //Y axis definition.
 
+        //Object instruction handler initialization
+        objectInstructionHandler = GameObject.Find("Object Instruction").GetComponent<objectInstructionHandler>();
+
         //Sets the state of the test
         state = 0;
         transitionState = false;
@@ -132,11 +137,13 @@ public class gameManager : MonoBehaviour
         slider = GameObject.Find("Slider").GetComponent<sliderHandler>();
 
         //Orders initialization
-        for (int i=0;i<625;i++)
+        nbTest = 625;
+
+        for (int i=0;i<nbTest;i++)
         {
             order0.Add(i);
         }
-        for (int i=0;i<625;i++)
+        for (int i=0;i<nbTest;i++)
         {
             order1.Add(i);
         }
@@ -155,7 +162,7 @@ public class gameManager : MonoBehaviour
         
         //Debug part
 
-        nbTestLeft = 625;
+        testIndex = 0;
 
     }
 
@@ -183,7 +190,8 @@ public class gameManager : MonoBehaviour
             if (stateEntry)
             {
                 canvasHandler.setButtonsEnabled(false,true);
-                canvasHandler.setTexts("                            INTRODUCTION\n You will have to respond to a few questions.\n The experimentation duration is approximatively 12 minutes.\n Be careful, you can only answer once to a each question.\n Please don't answer randomly.","TEST METHOD #1\n You will soon be shown a scene with a robot looking somewhere.\n Your goal will be to: \n    -Select the object you think the robot is looking at. \n    -Submit your response.\n   -Wait for the robot to move its neck and eyes and repeat the process.");
+                canvasHandler.setTexts("                            INTRODUCTION\n You will have to respond to a few questions.\n The experimentation implements two different testing methodologies and its duration is approximatively 12 minutes.\n For each methodology, you will have to perform a certain number of tests following the same process each time, it might seem slightly repetitive.\n Be careful, you can only answer once to each question.\n Please don't answer randomly.","FIRST METHODOLOGY");
+                canvasHandler.setTextProperties(1,80,TextAlignmentOptions.Center, FontStyles.Underline);
                 stateEntry = false;
 
             }
@@ -196,7 +204,7 @@ public class gameManager : MonoBehaviour
             }
         }
 
-        //Second instruction screen
+        //Introduction of the methodology screen
         else if (state==1)
         {
             if (stateEntry)
@@ -208,6 +216,8 @@ public class gameManager : MonoBehaviour
             {
                 state=0;
                 transitionState = true;
+                canvasHandler.setText(1,"                            INTRODUCTION\n You will have to respond to a few questions.\n The experimentation implements two different testing methodologies and its duration is approximatively 12 minutes.\n For each methodology, you will have to perform a certain number of tests following the same process each time, it might seem slightly repetitive.\n Be careful, you can only answer once to each question.\n Please don't answer randomly.");
+                
                 canvasHandler.textsTranslationLeft();
                 stateEntry = true;
             }
@@ -215,25 +225,54 @@ public class gameManager : MonoBehaviour
             {
                 state=2;
                 transitionState = true;
+                canvasHandler.setText(1,"FIRST TESTING METHOD (1/"+nbTest+" iteration)\n You will soon be shown a scene with a robot looking somewhere.\n Your goal will be to: \n    -Select the object you think the robot is looking at. \n    -Submit your response.\n   -Observe carefully the robot moving its neck and eyes and repeat the process.");
+                canvasHandler.textsTranslationRight();
+                stateEntry = true;
+            }
+        }
+
+
+        //Explanation of the methodology screen
+        else if (state==2)
+        {
+            if (stateEntry)
+            {
+                canvasHandler.setButtonsEnabled(true,true);
+                stateEntry = false;
+            }
+            else if (canvasHandler.leftClicked)
+            {
+                state=1;
+                transitionState = true;
+                canvasHandler.textsTranslationLeft();
+                stateEntry = true;
+            }
+            else if (canvasHandler.rightClicked)
+            {
+                state=3;
+                transitionState = true;
                 canvasHandler.mainCanvasTranslationOut();
                 stateEntry = true;
             }
         }
 
 
-        else if (state==2)
+        //First part of first methodology test transition state
+        else if (state==3)
         {
             if (stateEntry)
             {
-                
+                objectInstructionHandler.setText("|1st PART|\n\n Select the object you think the robot is looking at, submit your answer and observe the robots face and eyes moving.");
+                print("Hiya that's the "+testIndex+"th test");
             }
 
             objectCanvasHandler.objectCanvasTransitionIn();
             transitionState = true;
-            state = 3;
+            state = 4;
         }
 
-        else if (state==3)
+        //First part of first methodology test state
+        else if (state==4)
         {
 
             if (stateEntry)
@@ -244,7 +283,7 @@ public class gameManager : MonoBehaviour
             else if (objectCanvasHandler.submitButtonPressed)
             {
                 print("Button pressed");
-                state = 4;
+                state = 5;
                 objectCanvasHandler.objectCanvasTransitionOut();
                 transitionState = true;
                 stateEntry = true;
@@ -252,16 +291,71 @@ public class gameManager : MonoBehaviour
             //Create a class for Toggles and disable the submit button when not a single one toggle is enabled.
         }
 
-        else if (state==4)
+        //Second part of first methodology test transition state
+        else if (state==5)
         {
             if (stateEntry)
             {
-                
+                objectInstructionHandler.setText("|2nd PART|\n\n The robot is now looking elsewhere. Select again the object you think the robot is now looking at and submit your answer.");
             }
 
             objectCanvasHandler.objectCanvasTransitionIn();
             transitionState = true;
-            state = 3;
+            state = 6;
+        }
+
+        //Second part of first methodology test state
+        else if (state==6)
+        {
+
+            if (stateEntry)
+            {
+                cameraHandler.setCameraMovementEnabled(true);
+                stateEntry = false;
+            }
+            else if (objectCanvasHandler.submitButtonPressed)
+            {
+                state = 7;
+                objectCanvasHandler.objectCanvasTransitionOut();
+                transitionState = true;
+                stateEntry = true;
+            }
+            //Create a class for Toggles and disable the submit button when not a single one toggle is enabled.
+        }
+
+
+        //Transition to instruction for next iteration of first methodology test
+        else if (state==7)
+        {
+            if (stateEntry)
+            {
+                testIndex++;
+            }
+
+            canvasHandler.setButtonsEnabled(false,true);
+            canvasHandler.setTexts("FIRST TESTING METHOD ("+(testIndex + 1)+"/"+nbTest+" iteration)\n You will soon be shown a scene with a robot looking somewhere.\n Your goal will be to: \n    -Select the object you think the robot is looking at. \n    -Submit your response.\n   -Observe carefully the robot moving its neck and eyes and repeat the process.","");
+            
+            canvasHandler.mainCanvasTranslationIn();
+            transitionState = true;
+            state = 8;
+
+        }
+
+        //Instruction to next iteration of first methodology test
+        else if (state==8)
+        {
+            if (stateEntry)
+            {
+                stateEntry = false;
+                
+            }
+            else if (canvasHandler.rightClicked)
+            {
+                state=3;
+                transitionState = true;
+                canvasHandler.mainCanvasTranslationOut();
+                stateEntry = true;
+            }
         }
 
         //State for the slider canvas animation in

@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 22668994}
   - component: {fileID: 22668995}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Submit Button Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.33333334}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -391,11 +391,14 @@ MonoBehaviour:
   canvasHandler: {fileID: 0}
   waves_rectTransform: {fileID: 0}
   button_transform: {fileID: 0}
+  submitButton: {fileID: 0}
   submitText: {fileID: 0}
+  submitButtonImage: {fileID: 0}
   anchoredPosition: {x: 0, y: 0}
   wavesEnabled: 0
   buttonHovered: 0
   readyToClick: 0
+  activated: 0
 --- !u!1 &65548566
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,15 +810,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64dd21e916d58041976ed97a75246fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  submitButtonHandler: {fileID: 0}
   currentToggle: {fileID: 0}
   toggles: []
-  currentCam: {fileID: 0}
   currentObject_transform: {fileID: 0}
   parent_transform: {fileID: 0}
   toggles_transform: {fileID: 0}
   renderTexture: {fileID: 0}
   currentTexture: {fileID: 0}
   tmpShift: {x: 0, y: 0, z: 0}
+  lastToggledUp: 0
 --- !u!1 &159380826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,6 +1768,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd831761def2e7c43b0528f0b21428f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  submitButtonHandler: {fileID: 0}
+  togglesHandler: {fileID: 0}
+  instructionHandler: {fileID: 0}
   canvas_rectTransform: {fileID: 0}
   anim: {fileID: 0}
   displayPosition: {x: 0, y: 0}
@@ -3539,7 +3547,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee89ebd39e2d3004f9991c5389c23dbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8de92f78b22855e4096ca014ab7ed2c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4035,7 +4043,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee89ebd39e2d3004f9991c5389c23dbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8de92f78b22855e4096ca014ab7ed2c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4469,7 +4477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee89ebd39e2d3004f9991c5389c23dbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8de92f78b22855e4096ca014ab7ed2c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4682,7 +4690,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee89ebd39e2d3004f9991c5389c23dbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8de92f78b22855e4096ca014ab7ed2c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5596,6 +5604,7 @@ MonoBehaviour:
   anchoredPosition: {x: 0, y: 0}
   wavesEnabled: 0
   buttonHovered: 0
+  readyToClick: 0
 --- !u!64 &913747487
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6427,8 +6436,9 @@ GameObject:
   - component: {fileID: 979531329}
   - component: {fileID: 979531331}
   - component: {fileID: 979531330}
+  - component: {fileID: 979531332}
   m_Layer: 5
-  m_Name: Slider Instruction
+  m_Name: Object Instruction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6451,8 +6461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 19}
-  m_SizeDelta: {x: 550, y: 50}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 550, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &979531330
 MonoBehaviour:
@@ -6509,7 +6519,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -6551,6 +6561,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979531328}
   m_CullTransparentMesh: 1
+--- !u!114 &979531332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979531328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea311dc04c740ad40bbf22e081eb81a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instruction: {fileID: 0}
 --- !u!1 &988490778
 GameObject:
   m_ObjectHideFlags: 0
@@ -8249,7 +8272,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee89ebd39e2d3004f9991c5389c23dbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8de92f78b22855e4096ca014ab7ed2c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9051,8 +9074,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 1442840575
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.33333334}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9683,7 +9706,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee89ebd39e2d3004f9991c5389c23dbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8de92f78b22855e4096ca014ab7ed2c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10282,6 +10305,7 @@ MonoBehaviour:
   sliderCanvasHandler: {fileID: 0}
   objectCanvasHandler: {fileID: 0}
   slider: {fileID: 0}
+  objectInstructionHandler: {fileID: 0}
   instructions0: {fileID: 0}
   instructions1: {fileID: 0}
   canvas_materials: []
@@ -10301,7 +10325,8 @@ MonoBehaviour:
   bigCanvasAnimationTime: 0
   objectNb: 0
   state: 0
-  nbTestLeft: 0
+  nbTest: 0
+  testIndex: 0
   bigCanvasTranslatingIn: 0
   bigCanvasTranslatingOut: 0
   rightClicked: 0
@@ -12375,7 +12400,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee89ebd39e2d3004f9991c5389c23dbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8de92f78b22855e4096ca014ab7ed2c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
