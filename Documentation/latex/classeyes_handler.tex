@@ -1,0 +1,138 @@
+\doxysection{eyes\+Handler Class Reference}
+\hypertarget{classeyes_handler}{}\label{classeyes_handler}\index{eyesHandler@{eyesHandler}}
+
+
+Handles the eyes and pupils movements during the simulation.  
+
+
+Inheritance diagram for eyes\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classeyes_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classeyes_handler_afcefec34ff70a5d9801e25f530bea81a}{set\+Eyes\+State}} (int eyes\+State)
+\begin{DoxyCompactList}\small\item\em This method allows to change the position of the eyes and the pupils by inputting an integer number between 0 and the value of {\bfseries{ nb\+Eyes\+State -\/ 1 }}. Note that inputting {\bfseries{0}} will make the robot look on its right and inputting {\bfseries{nb\+Eyes\+State -\/ 1}} will make it look on its left. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classeyes_handler_ab025f7a3ad6b10c161da5c562e62941f}{smooth\+Eyes\+Movement}} (int eyes\+State)
+\begin{DoxyCompactList}\small\item\em This method allows to change the position of the eyes and the pupils by inputting an integer number between 0 and the value of {\bfseries{ nb\+Eyes\+State -\/ 1 }}. The movement will be smooth, therefore it will take time for the eyes to get to their final location on the robot\textquotesingle{}s screen. The method activates the movement of the eyes and the {\bfseries{Update}} method is operating the smooth movement. Note that inputting {\bfseries{0}} will make the robot look on its right and inputting {\bfseries{nb\+Eyes\+State}} will make it look on its left. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classeyes_handler_a6dc3ee5c7fb5ef3a64d09f960cb57829}{set\+Eyes\+Movement\+Enabled}} (bool value)
+\begin{DoxyCompactList}\small\item\em This methods allows to enable or disable the eyes movement. When the eyes movements are disabled the eyes won\textquotesingle{}t be able to move using any of the two functions {\bfseries{set\+Eyes\+State}} or {\bfseries{smooth\+Eyes\+Movement}}, otherwise it will be possible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classeyes_handler_a9fa232925989934161737e1558a60beb}\label{classeyes_handler_a9fa232925989934161737e1558a60beb} 
+Material {\bfseries screen\+Eyes\+\_\+material}
+\begin{DoxyCompactList}\small\item\em Material for the eyes. \end{DoxyCompactList}\item 
+\Hypertarget{classeyes_handler_a8858884ba80613634d201fdf069c2c84}\label{classeyes_handler_a8858884ba80613634d201fdf069c2c84} 
+Material {\bfseries screen\+Pupils\+\_\+material}
+\begin{DoxyCompactList}\small\item\em Material for the pupils. \end{DoxyCompactList}\item 
+\Hypertarget{classeyes_handler_ac33300a96fb8f61417003f140ce62f44}\label{classeyes_handler_ac33300a96fb8f61417003f140ce62f44} 
+int {\bfseries eyes\+Current\+State}
+\begin{DoxyCompactList}\small\item\em Current state of the eyes. \end{DoxyCompactList}\item 
+\Hypertarget{classeyes_handler_abdc2505017d955c38737eeac5526c6ca}\label{classeyes_handler_abdc2505017d955c38737eeac5526c6ca} 
+float {\bfseries x\+Translation\+Screen\+Current}
+\begin{DoxyCompactList}\small\item\em Current translation of the eyes. \end{DoxyCompactList}\item 
+\Hypertarget{classeyes_handler_ab24c11c39522b646709b839244e64909}\label{classeyes_handler_ab24c11c39522b646709b839244e64909} 
+float {\bfseries translation\+Order}
+\begin{DoxyCompactList}\small\item\em Order of translation for the eyes. \end{DoxyCompactList}\item 
+\Hypertarget{classeyes_handler_a83a460a99535bc8b909a274b5dadd618}\label{classeyes_handler_a83a460a99535bc8b909a274b5dadd618} 
+bool {\bfseries on\+Movement}
+\begin{DoxyCompactList}\small\item\em Flag indicating whether the eyes are currently moving or not. \end{DoxyCompactList}\item 
+\Hypertarget{classeyes_handler_a27c027bee3562dff92b44cfbd8304475}\label{classeyes_handler_a27c027bee3562dff92b44cfbd8304475} 
+bool {\bfseries eyes\+Movement\+Enabled}
+\begin{DoxyCompactList}\small\item\em When set on True the eyes can be moved, when on False they can\textquotesingle{}t. \end{DoxyCompactList}\item 
+\Hypertarget{classeyes_handler_a6f6fb29efa968fdf279dcfeebc9a7f6e}\label{classeyes_handler_a6f6fb29efa968fdf279dcfeebc9a7f6e} 
+int {\bfseries nb\+Eyes\+State}
+\begin{DoxyCompactList}\small\item\em Number of different eye positions. The pupils position will depend on the eyes position. Each eyes position will be equally distant from the other. \end{DoxyCompactList}\item 
+\Hypertarget{classeyes_handler_a3fb33e1635494aa66eb2d67865bc7df8}\label{classeyes_handler_a3fb33e1635494aa66eb2d67865bc7df8} 
+float {\bfseries translation\+Amplitude}
+\begin{DoxyCompactList}\small\item\em Amplitude max for the translation of the eyes. \end{DoxyCompactList}\item 
+\Hypertarget{classeyes_handler_a765e7738766b4862b8c9cbac00d9312c}\label{classeyes_handler_a765e7738766b4862b8c9cbac00d9312c} 
+float {\bfseries translation\+Speed}
+\begin{DoxyCompactList}\small\item\em Speed of translation for the eyes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classeyes_handler_a9ea5a7a6aea3821fa82fc0351abdb69c}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\Hypertarget{classeyes_handler_a25d3388b43490652c6e10085f0b79ba7}\label{classeyes_handler_a25d3388b43490652c6e10085f0b79ba7} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the eyes and pupils movements during the simulation. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classeyes_handler_a6dc3ee5c7fb5ef3a64d09f960cb57829}\label{classeyes_handler_a6dc3ee5c7fb5ef3a64d09f960cb57829} 
+\index{eyesHandler@{eyesHandler}!setEyesMovementEnabled@{setEyesMovementEnabled}}
+\index{setEyesMovementEnabled@{setEyesMovementEnabled}!eyesHandler@{eyesHandler}}
+\doxysubsubsection{\texorpdfstring{setEyesMovementEnabled()}{setEyesMovementEnabled()}}
+{\footnotesize\ttfamily void eyes\+Handler.\+set\+Eyes\+Movement\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+This methods allows to enable or disable the eyes movement. When the eyes movements are disabled the eyes won\textquotesingle{}t be able to move using any of the two functions {\bfseries{set\+Eyes\+State}} or {\bfseries{smooth\+Eyes\+Movement}}, otherwise it will be possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & If value is set to true the eyes\textquotesingle{} movements will be enabled, if set to false they will be disabled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classeyes_handler_afcefec34ff70a5d9801e25f530bea81a}\label{classeyes_handler_afcefec34ff70a5d9801e25f530bea81a} 
+\index{eyesHandler@{eyesHandler}!setEyesState@{setEyesState}}
+\index{setEyesState@{setEyesState}!eyesHandler@{eyesHandler}}
+\doxysubsubsection{\texorpdfstring{setEyesState()}{setEyesState()}}
+{\footnotesize\ttfamily void eyes\+Handler.\+set\+Eyes\+State (\begin{DoxyParamCaption}\item[{int}]{eyes\+State }\end{DoxyParamCaption})}
+
+
+
+This method allows to change the position of the eyes and the pupils by inputting an integer number between 0 and the value of {\bfseries{ nb\+Eyes\+State -\/ 1 }}. Note that inputting {\bfseries{0}} will make the robot look on its right and inputting {\bfseries{nb\+Eyes\+State -\/ 1}} will make it look on its left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eyes\+State} & This value has to be included between 0 and {\bfseries{nb\+Eyes\+State -\/ 1}} and will determine the position of the eyes on the robot\textquotesingle{}s screen.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classeyes_handler_ab025f7a3ad6b10c161da5c562e62941f}\label{classeyes_handler_ab025f7a3ad6b10c161da5c562e62941f} 
+\index{eyesHandler@{eyesHandler}!smoothEyesMovement@{smoothEyesMovement}}
+\index{smoothEyesMovement@{smoothEyesMovement}!eyesHandler@{eyesHandler}}
+\doxysubsubsection{\texorpdfstring{smoothEyesMovement()}{smoothEyesMovement()}}
+{\footnotesize\ttfamily void eyes\+Handler.\+smooth\+Eyes\+Movement (\begin{DoxyParamCaption}\item[{int}]{eyes\+State }\end{DoxyParamCaption})}
+
+
+
+This method allows to change the position of the eyes and the pupils by inputting an integer number between 0 and the value of {\bfseries{ nb\+Eyes\+State -\/ 1 }}. The movement will be smooth, therefore it will take time for the eyes to get to their final location on the robot\textquotesingle{}s screen. The method activates the movement of the eyes and the {\bfseries{Update}} method is operating the smooth movement. Note that inputting {\bfseries{0}} will make the robot look on its right and inputting {\bfseries{nb\+Eyes\+State}} will make it look on its left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eyes\+State} & This value has to be included between 0 and {\bfseries{nb\+Eyes\+State -\/ 1}} and will determine the position of the eyes on the robot\textquotesingle{}s screen.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classeyes_handler_a9ea5a7a6aea3821fa82fc0351abdb69c}\label{classeyes_handler_a9ea5a7a6aea3821fa82fc0351abdb69c} 
+\index{eyesHandler@{eyesHandler}!Start@{Start}}
+\index{Start@{Start}!eyesHandler@{eyesHandler}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void eyes\+Handler.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start is called before the first frame update. 
+
+--- Customizable eyes parameters ---
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Unity projects/\+TCD Robot Gaze/\+Simulations/\+Robot Gaze/\+Assets/eyes\+Handler.\+cs\end{DoxyCompactItemize}

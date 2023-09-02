@@ -1,0 +1,100 @@
+\doxysection{submit\+Button\+Slider\+Handler Class Reference}
+\hypertarget{classsubmit_button_slider_handler}{}\label{classsubmit_button_slider_handler}\index{submitButtonSliderHandler@{submitButtonSliderHandler}}
+
+
+Handles the submit button of the canvas used to select the location of the user where he feels looked at by the robot. This button is used to submit his answer.  
+
+
+Inheritance diagram for submit\+Button\+Slider\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsubmit_button_slider_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsubmit_button_slider_handler_a42cf65733065293ff84f23ceb1855c7f}{On\+Pointer\+Enter}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em This method is called when the mouse enters the area of the submit button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsubmit_button_slider_handler_abb86d17c5d8f27f47af68e4c1fa9907f}{On\+Pointer\+Exit}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em This method is called when the mouse exits the area of the submit button. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_slider_handler_af44a5c83351213097ad04aec15aab609}\label{classsubmit_button_slider_handler_af44a5c83351213097ad04aec15aab609} 
+void {\bfseries appear} ()
+\begin{DoxyCompactList}\small\item\em This method is called when the submit button appears on the screen. It is used to set the location of the loading rectangle and the state of the submit button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classsubmit_button_slider_handler_ab6d046f05f50be27331cfb1d20d91f08}\label{classsubmit_button_slider_handler_ab6d046f05f50be27331cfb1d20d91f08} 
+\mbox{\hyperlink{classslider_canvas_handler}{slider\+Canvas\+Handler}} {\bfseries canvas\+Handler}
+\begin{DoxyCompactList}\small\item\em Instance of the class handling this canvas. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_slider_handler_a76bfdae1b40f297638fdd6d5324ce7aa}\label{classsubmit_button_slider_handler_a76bfdae1b40f297638fdd6d5324ce7aa} 
+Rect\+Transform {\bfseries loading\+Rectangle\+\_\+rect\+Transform}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Recttransform Game\+Object}} used to set the position of the loading blue rectangle that will be filling the submit button. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_slider_handler_a75f8fef181474c05280a45ad04c74741}\label{classsubmit_button_slider_handler_a75f8fef181474c05280a45ad04c74741} 
+Transform {\bfseries button\+\_\+transform}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Transform}} component of the submit button. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_slider_handler_a4bbb1f825be448c14747fb2e0fee4c02}\label{classsubmit_button_slider_handler_a4bbb1f825be448c14747fb2e0fee4c02} 
+Text\+Mesh\+Pro\+UGUI {\bfseries submit\+Text}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Text\+Mesh\+Pro\+UGUI}} component containing the line that will be written on the submit button. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_slider_handler_a2443cd69f72eb01670ec3d03ce03c30c}\label{classsubmit_button_slider_handler_a2443cd69f72eb01670ec3d03ce03c30c} 
+Vector2 {\bfseries anchored\+Position}
+\begin{DoxyCompactList}\small\item\em The position of the blue rectangle, representing the loading of the submit button, in the {\bfseries{Rect\+Transform}} \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_slider_handler_a0277a88a17f3cfb450ded64f1a7e8983}\label{classsubmit_button_slider_handler_a0277a88a17f3cfb450ded64f1a7e8983} 
+bool {\bfseries loading\+Rectangle\+Enabled}
+\begin{DoxyCompactList}\small\item\em The boolean indicating if the loading\+Rectangle should be enabled or disabled. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_slider_handler_a42ee111d4631ba45cfbab4eaac2b400b}\label{classsubmit_button_slider_handler_a42ee111d4631ba45cfbab4eaac2b400b} 
+bool {\bfseries button\+Hovered}
+\begin{DoxyCompactList}\small\item\em The boolean indicating whether yes or no the button is hovered by the mouse. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_slider_handler_a7b407f95ebdc842afc554dc46d9f86df}\label{classsubmit_button_slider_handler_a7b407f95ebdc842afc554dc46d9f86df} 
+bool {\bfseries ready\+To\+Click}
+\begin{DoxyCompactList}\small\item\em The boolean indicating if the button is ready to be clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classsubmit_button_slider_handler_a30f4b1bdddb2072ef521bf062edb5314}\label{classsubmit_button_slider_handler_a30f4b1bdddb2072ef521bf062edb5314} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_slider_handler_a0d30a91dc9f90e2a92c2bcbee9567d6b}\label{classsubmit_button_slider_handler_a0d30a91dc9f90e2a92c2bcbee9567d6b} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the submit button of the canvas used to select the location of the user where he feels looked at by the robot. This button is used to submit his answer. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsubmit_button_slider_handler_a42cf65733065293ff84f23ceb1855c7f}\label{classsubmit_button_slider_handler_a42cf65733065293ff84f23ceb1855c7f} 
+\index{submitButtonSliderHandler@{submitButtonSliderHandler}!OnPointerEnter@{OnPointerEnter}}
+\index{OnPointerEnter@{OnPointerEnter}!submitButtonSliderHandler@{submitButtonSliderHandler}}
+\doxysubsubsection{\texorpdfstring{OnPointerEnter()}{OnPointerEnter()}}
+{\footnotesize\ttfamily void submit\+Button\+Slider\+Handler.\+On\+Pointer\+Enter (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})}
+
+
+
+This method is called when the mouse enters the area of the submit button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Event payload associatied with pointer but it isn\textquotesingle{}t used in the method.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsubmit_button_slider_handler_abb86d17c5d8f27f47af68e4c1fa9907f}\label{classsubmit_button_slider_handler_abb86d17c5d8f27f47af68e4c1fa9907f} 
+\index{submitButtonSliderHandler@{submitButtonSliderHandler}!OnPointerExit@{OnPointerExit}}
+\index{OnPointerExit@{OnPointerExit}!submitButtonSliderHandler@{submitButtonSliderHandler}}
+\doxysubsubsection{\texorpdfstring{OnPointerExit()}{OnPointerExit()}}
+{\footnotesize\ttfamily void submit\+Button\+Slider\+Handler.\+On\+Pointer\+Exit (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})}
+
+
+
+This method is called when the mouse exits the area of the submit button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Event payload associatied with pointer but it isn\textquotesingle{}t used in the method.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Unity projects/\+TCD Robot Gaze/\+Simulations/\+Robot Gaze/\+Assets/submit\+Button\+Slider\+Handler.\+cs\end{DoxyCompactItemize}

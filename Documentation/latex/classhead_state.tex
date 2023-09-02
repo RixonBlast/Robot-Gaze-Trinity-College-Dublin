@@ -1,0 +1,135 @@
+\doxysection{head\+State Class Reference}
+\hypertarget{classhead_state}{}\label{classhead_state}\index{headState@{headState}}
+
+
+Handles the head\textquotesingle{}s movements during the simulation.  
+
+
+Inheritance diagram for head\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhead_state}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classhead_state_a34b174aa2a5fa11e2a782e60e5aa03a5}{set\+Head\+State}} (int \mbox{\hyperlink{classhead_state}{head\+State}})
+\begin{DoxyCompactList}\small\item\em This method allows to change the position of the head by inputting an integer number between 0 and the value of {\bfseries{ nb\+Head\+State -\/ 1 }}. Note that inputting {\bfseries{0}} will make the robot turn his head on its right and inputting {\bfseries{nb\+Head\+State -\/ 1}} will make it turn its head on its left. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classhead_state_acb6575410d76c5e254883cad0705e95b}{smooth\+Head\+Movement}} (int \mbox{\hyperlink{classhead_state}{head\+State}})
+\begin{DoxyCompactList}\small\item\em This method allows to change the position of the head by inputting an integer number between 0 and the value of {\bfseries{ nb\+Head\+State -\/ 1 }}. The movement will be smooth, therefore it will take time for the head to rotate to its final angle. The method activates the movement of the head and the {\bfseries{Update}} method is operating the smooth movement. Note that inputting {\bfseries{0}} will make the robot turn its head on its right and inputting {\bfseries{nb\+Head\+State -\/ 1}} will make it turn its head on its left. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classhead_state_af80dd8bb8a1e6f86a3dfe60503d651e9}{set\+Head\+Movement\+Enabled}} (bool value)
+\begin{DoxyCompactList}\small\item\em This methods allows to enable or disable the head movement. When the head movements are disabled the head won\textquotesingle{}t be able to rotate using any of the two functions {\bfseries{set\+Head\+State}} or {\bfseries{smooth\+Head\+Movement}}, otherwise it will be possible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classhead_state_a935c1e696ae07d38d2d6643556a1f7c5}\label{classhead_state_a935c1e696ae07d38d2d6643556a1f7c5} 
+Transform {\bfseries head\+Assembly\+\_\+transform}
+\begin{DoxyCompactList}\small\item\em The transform component of the head. \end{DoxyCompactList}\item 
+\Hypertarget{classhead_state_ae9e2dfad9da1dfb7345fd7ff6a7773e7}\label{classhead_state_ae9e2dfad9da1dfb7345fd7ff6a7773e7} 
+int {\bfseries head\+Current\+State}
+\begin{DoxyCompactList}\small\item\em Current state of the head, determines the angle of it. \end{DoxyCompactList}\item 
+\Hypertarget{classhead_state_a5094470f34ef34bdf8cd948eeddcc553}\label{classhead_state_a5094470f34ef34bdf8cd948eeddcc553} 
+float {\bfseries y\+Angle\+Head\+Current}
+\begin{DoxyCompactList}\small\item\em The current angle of rotation of the head. \end{DoxyCompactList}\item 
+\Hypertarget{classhead_state_ad9a57bbe0a5f5519a1a75c8c83991da5}\label{classhead_state_ad9a57bbe0a5f5519a1a75c8c83991da5} 
+float {\bfseries rotation\+Order}
+\begin{DoxyCompactList}\small\item\em The desired angle of the head, the rotation instruction. \end{DoxyCompactList}\item 
+\Hypertarget{classhead_state_af06a9b5c41cf4b4436a09ced00edcfa1}\label{classhead_state_af06a9b5c41cf4b4436a09ced00edcfa1} 
+bool {\bfseries on\+Movement}
+\begin{DoxyCompactList}\small\item\em A flag indicating whether the head should be moving or not. \end{DoxyCompactList}\item 
+\Hypertarget{classhead_state_ad616fb03c12fdd2edd1ee00999411730}\label{classhead_state_ad616fb03c12fdd2edd1ee00999411730} 
+bool {\bfseries head\+Movement\+Enabled}
+\begin{DoxyCompactList}\small\item\em A flag to allow headmovement. \end{DoxyCompactList}\item 
+\Hypertarget{classhead_state_a8627d4307b382c34c801ad0ac2542ccc}\label{classhead_state_a8627d4307b382c34c801ad0ac2542ccc} 
+int {\bfseries nb\+Head\+State}
+\begin{DoxyCompactList}\small\item\em The number of possible neck states (angle). Each angle will be equally distant from the other. \end{DoxyCompactList}\item 
+\Hypertarget{classhead_state_aa4259e1afb92a68f23308d9d6477fd25}\label{classhead_state_aa4259e1afb92a68f23308d9d6477fd25} 
+float {\bfseries rotation\+Amplitude}
+\begin{DoxyCompactList}\small\item\em The maximum angle of rotation that the head can achieve. \end{DoxyCompactList}\item 
+\Hypertarget{classhead_state_a3018280371695ae6cfd3bab97ab87a49}\label{classhead_state_a3018280371695ae6cfd3bab97ab87a49} 
+float {\bfseries rotation\+Speed}
+\begin{DoxyCompactList}\small\item\em The rotation speed of the head. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classhead_state_a16a2ba83b6ab2c6ae968cb462476a219}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\Hypertarget{classhead_state_a44695b8077149e0a9bdcbc7dc422d408}\label{classhead_state_a44695b8077149e0a9bdcbc7dc422d408} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the head\textquotesingle{}s movements during the simulation. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classhead_state_af80dd8bb8a1e6f86a3dfe60503d651e9}\label{classhead_state_af80dd8bb8a1e6f86a3dfe60503d651e9} 
+\index{headState@{headState}!setHeadMovementEnabled@{setHeadMovementEnabled}}
+\index{setHeadMovementEnabled@{setHeadMovementEnabled}!headState@{headState}}
+\doxysubsubsection{\texorpdfstring{setHeadMovementEnabled()}{setHeadMovementEnabled()}}
+{\footnotesize\ttfamily void head\+State.\+set\+Head\+Movement\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+This methods allows to enable or disable the head movement. When the head movements are disabled the head won\textquotesingle{}t be able to rotate using any of the two functions {\bfseries{set\+Head\+State}} or {\bfseries{smooth\+Head\+Movement}}, otherwise it will be possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & If value is set to true the head movements will be enabled, if set to false they will be disabled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classhead_state_a34b174aa2a5fa11e2a782e60e5aa03a5}\label{classhead_state_a34b174aa2a5fa11e2a782e60e5aa03a5} 
+\index{headState@{headState}!setHeadState@{setHeadState}}
+\index{setHeadState@{setHeadState}!headState@{headState}}
+\doxysubsubsection{\texorpdfstring{setHeadState()}{setHeadState()}}
+{\footnotesize\ttfamily void head\+State.\+set\+Head\+State (\begin{DoxyParamCaption}\item[{int}]{head\+State }\end{DoxyParamCaption})}
+
+
+
+This method allows to change the position of the head by inputting an integer number between 0 and the value of {\bfseries{ nb\+Head\+State -\/ 1 }}. Note that inputting {\bfseries{0}} will make the robot turn his head on its right and inputting {\bfseries{nb\+Head\+State -\/ 1}} will make it turn its head on its left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{classhead_state}{head\+State}} & This value has to be included between 0 and {\bfseries{nb\+Head\+State -\/ 1}} and will determine the angle of rotation of the robot\textquotesingle{}s head.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classhead_state_acb6575410d76c5e254883cad0705e95b}\label{classhead_state_acb6575410d76c5e254883cad0705e95b} 
+\index{headState@{headState}!smoothHeadMovement@{smoothHeadMovement}}
+\index{smoothHeadMovement@{smoothHeadMovement}!headState@{headState}}
+\doxysubsubsection{\texorpdfstring{smoothHeadMovement()}{smoothHeadMovement()}}
+{\footnotesize\ttfamily bool head\+State.\+smooth\+Head\+Movement (\begin{DoxyParamCaption}\item[{int}]{head\+State }\end{DoxyParamCaption})}
+
+
+
+This method allows to change the position of the head by inputting an integer number between 0 and the value of {\bfseries{ nb\+Head\+State -\/ 1 }}. The movement will be smooth, therefore it will take time for the head to rotate to its final angle. The method activates the movement of the head and the {\bfseries{Update}} method is operating the smooth movement. Note that inputting {\bfseries{0}} will make the robot turn its head on its right and inputting {\bfseries{nb\+Head\+State -\/ 1}} will make it turn its head on its left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{classhead_state}{head\+State}} & This value has to be included between 0 and {\bfseries{nb\+Head\+State -\/ 1}} and will determine the angle of rotation of the robot\textquotesingle{}s head.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classhead_state_a16a2ba83b6ab2c6ae968cb462476a219}\label{classhead_state_a16a2ba83b6ab2c6ae968cb462476a219} 
+\index{headState@{headState}!Start@{Start}}
+\index{Start@{Start}!headState@{headState}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void head\+State.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start is called before the first frame update. 
+
+--- Customizable head parameters ---
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Unity projects/\+TCD Robot Gaze/\+Simulations/\+Robot Gaze/\+Assets/head\+State.\+cs\end{DoxyCompactItemize}

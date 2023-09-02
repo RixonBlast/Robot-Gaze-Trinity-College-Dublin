@@ -1,0 +1,97 @@
+\doxysection{toggles\+Handler Class Reference}
+\hypertarget{classtoggles_handler}{}\label{classtoggles_handler}\index{togglesHandler@{togglesHandler}}
+
+
+Handles the toggle buttons that are used to select the object the user thinks the robot is looking at. Only one of them can be activated at a time. Activating a toggle button by clicking on it makes the submit button interactable with. Clicking on an activated toggle button deactivates it.  
+
+
+Inheritance diagram for toggles\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtoggles_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtoggles_handler_abee0d2e9a38a52a4d268de598a429493}{toggle\+Up}} (int toggle)
+\begin{DoxyCompactList}\small\item\em This method is used to set a toggle button up or down. It is called when a toggle button has been clicked on. If the toggle button selected is already up it will set it back down. \end{DoxyCompactList}\item 
+\Hypertarget{classtoggles_handler_a878cc93f5be872afc4a64e4ee858e04b}\label{classtoggles_handler_a878cc93f5be872afc4a64e4ee858e04b} 
+void {\bfseries appear} ()
+\begin{DoxyCompactList}\small\item\em This method is called when the toggle buttons need to appear on the screen. It is used to set the toggle button that was previously up back down. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtoggles_handler_a04b875acf7a92f83b5c40437eb4b315d}{set\+Interactable}} (bool value)
+\begin{DoxyCompactList}\small\item\em This method is called to deactivate or activate the toggle buttons. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classtoggles_handler_a52570fafb2fe8a14689adc4d851f9aa9}\label{classtoggles_handler_a52570fafb2fe8a14689adc4d851f9aa9} 
+Game\+Object {\bfseries button}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Game\+Object}} of the submit button. \end{DoxyCompactList}\item 
+\Hypertarget{classtoggles_handler_a02f80050c07686b71b08f498e6f6ff1b}\label{classtoggles_handler_a02f80050c07686b71b08f498e6f6ff1b} 
+\mbox{\hyperlink{classsubmit_button_object_handler}{submit\+Button\+Object\+Handler}} {\bfseries submit\+Button\+Handler}
+\begin{DoxyCompactList}\small\item\em Instance of the class handling the submit button. \end{DoxyCompactList}\item 
+\Hypertarget{classtoggles_handler_a411be046ccda193870db490d834f3d60}\label{classtoggles_handler_a411be046ccda193870db490d834f3d60} 
+Transform {\bfseries current\+Toggle}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Transform}} component for the current toggle button that is being treated. \end{DoxyCompactList}\item 
+\Hypertarget{classtoggles_handler_ad0f3de49d953feac663ccbeda9bfae76}\label{classtoggles_handler_ad0f3de49d953feac663ccbeda9bfae76} 
+List$<$ Toggle $>$ {\bfseries toggles}
+\begin{DoxyCompactList}\small\item\em The list of {\bfseries{Toggle}} components attached to the toggle button. \end{DoxyCompactList}\item 
+\Hypertarget{classtoggles_handler_abe5f062267d9472fdc0c021c430604ec}\label{classtoggles_handler_abe5f062267d9472fdc0c021c430604ec} 
+Transform {\bfseries parent\+\_\+transform}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Transform}} component associated to the {\bfseries{Game\+Object}} containing the list of toggle buttons. \end{DoxyCompactList}\item 
+\Hypertarget{classtoggles_handler_a322306db8ed5b8a4f15fa1a886915aff}\label{classtoggles_handler_a322306db8ed5b8a4f15fa1a886915aff} 
+Transform {\bfseries toggles\+\_\+transform}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Transform}} component associated to each toggle buttons. \end{DoxyCompactList}\item 
+\Hypertarget{classtoggles_handler_a3d411c039977834c347f1b001fe2aa99}\label{classtoggles_handler_a3d411c039977834c347f1b001fe2aa99} 
+int {\bfseries last\+Toggled\+Up}
+\begin{DoxyCompactList}\small\item\em The index of the last toggle button that has been set to \"{}up\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classtoggles_handler_af4f5a3d25f7cfda10b2aa2920cefe986}\label{classtoggles_handler_af4f5a3d25f7cfda10b2aa2920cefe986} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\Hypertarget{classtoggles_handler_ac668670db6da3491cd4926b093851a68}\label{classtoggles_handler_ac668670db6da3491cd4926b093851a68} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the toggle buttons that are used to select the object the user thinks the robot is looking at. Only one of them can be activated at a time. Activating a toggle button by clicking on it makes the submit button interactable with. Clicking on an activated toggle button deactivates it. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtoggles_handler_a04b875acf7a92f83b5c40437eb4b315d}\label{classtoggles_handler_a04b875acf7a92f83b5c40437eb4b315d} 
+\index{togglesHandler@{togglesHandler}!setInteractable@{setInteractable}}
+\index{setInteractable@{setInteractable}!togglesHandler@{togglesHandler}}
+\doxysubsubsection{\texorpdfstring{setInteractable()}{setInteractable()}}
+{\footnotesize\ttfamily void toggles\+Handler.\+set\+Interactable (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+This method is called to deactivate or activate the toggle buttons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & If it is set to true then the toggle buttons will be activated. They will get deactivated otherwise \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtoggles_handler_abee0d2e9a38a52a4d268de598a429493}\label{classtoggles_handler_abee0d2e9a38a52a4d268de598a429493} 
+\index{togglesHandler@{togglesHandler}!toggleUp@{toggleUp}}
+\index{toggleUp@{toggleUp}!togglesHandler@{togglesHandler}}
+\doxysubsubsection{\texorpdfstring{toggleUp()}{toggleUp()}}
+{\footnotesize\ttfamily void toggles\+Handler.\+toggle\+Up (\begin{DoxyParamCaption}\item[{int}]{toggle }\end{DoxyParamCaption})}
+
+
+
+This method is used to set a toggle button up or down. It is called when a toggle button has been clicked on. If the toggle button selected is already up it will set it back down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em toggle} & The index of the toggle button that will be switched.\texorpdfstring{$<$}{<} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Unity projects/\+TCD Robot Gaze/\+Simulations/\+Robot Gaze/\+Assets/toggles\+Handler.\+cs\end{DoxyCompactItemize}

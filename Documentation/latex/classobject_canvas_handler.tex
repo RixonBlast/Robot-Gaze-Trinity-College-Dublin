@@ -1,0 +1,75 @@
+\doxysection{object\+Canvas\+Handler Class Reference}
+\hypertarget{classobject_canvas_handler}{}\label{classobject_canvas_handler}\index{objectCanvasHandler@{objectCanvasHandler}}
+
+
+Handles the canvas used to select the object at which the robot is looking. Toggle buttons are used to select the object and a submit button is used to submit the answer.  
+
+
+Inheritance diagram for object\+Canvas\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classobject_canvas_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classobject_canvas_handler_a86f2a7446b2574e60b21fe53c4b48cfc}\label{classobject_canvas_handler_a86f2a7446b2574e60b21fe53c4b48cfc} 
+void {\bfseries object\+Canvas\+Transition\+In} ()
+\begin{DoxyCompactList}\small\item\em This method is called when this canvas needs to transition \"{}in\"{}. It plays the animation of transition. The animation is a shade. \end{DoxyCompactList}\item 
+\Hypertarget{classobject_canvas_handler_a6dc0e48b6f70f43235480cd477a4280d}\label{classobject_canvas_handler_a6dc0e48b6f70f43235480cd477a4280d} 
+void {\bfseries object\+Canvas\+Transition\+Out} ()
+\begin{DoxyCompactList}\small\item\em This method is called when this canvas needs to transition \"{}out\"{}. It plays the animation of transition. The animation is a shade. \end{DoxyCompactList}\item 
+\Hypertarget{classobject_canvas_handler_af4fa273a76f6b0a6bf0ce793c66e3f57}\label{classobject_canvas_handler_af4fa273a76f6b0a6bf0ce793c66e3f57} 
+void {\bfseries on\+Object\+Canvas\+Transition\+In\+Finished} ()
+\begin{DoxyCompactList}\small\item\em This method is called by the {\bfseries{animator}} component when the animation \"{}in\"{} is finished. It is used to set some parameters for the canvas. \end{DoxyCompactList}\item 
+\Hypertarget{classobject_canvas_handler_afdeccc010b3131835a952831d79de410}\label{classobject_canvas_handler_afdeccc010b3131835a952831d79de410} 
+void {\bfseries on\+Object\+Canvas\+Transition\+Out\+Finished} ()
+\begin{DoxyCompactList}\small\item\em This method is called by the {\bfseries{animator}} component when the animation \"{}out\"{} is finished. It is used to set some paramaters for the canvas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classobject_canvas_handler_a31a009bac8ae364629a8a762260c24f4}\label{classobject_canvas_handler_a31a009bac8ae364629a8a762260c24f4} 
+\mbox{\hyperlink{classsubmit_button_object_handler}{submit\+Button\+Object\+Handler}} {\bfseries submit\+Button\+Handler}
+\begin{DoxyCompactList}\small\item\em Instance of the class handling the submit button. \end{DoxyCompactList}\item 
+\Hypertarget{classobject_canvas_handler_ae16be706464cc9217bb31f3b1fee650a}\label{classobject_canvas_handler_ae16be706464cc9217bb31f3b1fee650a} 
+\mbox{\hyperlink{classtoggles_handler}{toggles\+Handler}} {\bfseries toggles\+Handler}
+\begin{DoxyCompactList}\small\item\em Instance of the class handling the toggle buttons. \end{DoxyCompactList}\item 
+\Hypertarget{classobject_canvas_handler_ae818e04e42712641486f13f8f209e6b2}\label{classobject_canvas_handler_ae818e04e42712641486f13f8f209e6b2} 
+Rect\+Transform {\bfseries canvas\+\_\+rect\+Transform}
+\begin{DoxyCompactList}\small\item\em The Rect\+Transform component used to position this canvas on the main canvas. \end{DoxyCompactList}\item 
+\Hypertarget{classobject_canvas_handler_ab88fd7ac2585d81d5472ddf45e62610d}\label{classobject_canvas_handler_ab88fd7ac2585d81d5472ddf45e62610d} 
+Animator {\bfseries anim}
+\begin{DoxyCompactList}\small\item\em The animator used to animate the transitions \"{}in\"{} and \"{}out\"{} of this canvas. \end{DoxyCompactList}\item 
+\Hypertarget{classobject_canvas_handler_ab57410ec05b9dfaff998e5c9ca204fe6}\label{classobject_canvas_handler_ab57410ec05b9dfaff998e5c9ca204fe6} 
+Vector2 {\bfseries display\+Position}
+\begin{DoxyCompactList}\small\item\em Position that this canvas needs to be in to be displayed on the screen. \end{DoxyCompactList}\item 
+\Hypertarget{classobject_canvas_handler_a16ebf7ea58d48a4e5d31f6f721a1891b}\label{classobject_canvas_handler_a16ebf7ea58d48a4e5d31f6f721a1891b} 
+Vector2 {\bfseries hide\+Position}
+\begin{DoxyCompactList}\small\item\em Position that this canvas needs to have to be hidden from the user\textquotesingle{}s view. \end{DoxyCompactList}\item 
+\Hypertarget{classobject_canvas_handler_a494c5b22a003766d3ccf1f50ab57b3d1}\label{classobject_canvas_handler_a494c5b22a003766d3ccf1f50ab57b3d1} 
+bool {\bfseries object\+Canvas\+Transition\+In\+Finished}
+\begin{DoxyCompactList}\small\item\em Boolean that is set to true when the canvas is finished transitioning on the screen. \end{DoxyCompactList}\item 
+\Hypertarget{classobject_canvas_handler_a58b1bc18135188bbee5d7ed29b1b982e}\label{classobject_canvas_handler_a58b1bc18135188bbee5d7ed29b1b982e} 
+bool {\bfseries object\+Canvas\+Transition\+Out\+Finished}
+\begin{DoxyCompactList}\small\item\em Boolean that is set to true when the canvas is finished transitioning out of the screen. \end{DoxyCompactList}\item 
+\Hypertarget{classobject_canvas_handler_a7c66b593c0632c2e06ce71977529548d}\label{classobject_canvas_handler_a7c66b593c0632c2e06ce71977529548d} 
+bool {\bfseries submit\+Button\+Pressed}
+\begin{DoxyCompactList}\small\item\em Boolean that is set to true when the submit button is pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classobject_canvas_handler_a7a4fab6a9d1e6b218ae79b974b7d500e}\label{classobject_canvas_handler_a7a4fab6a9d1e6b218ae79b974b7d500e} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\Hypertarget{classobject_canvas_handler_ade7bec0af6af35cf05d17b410fd2b699}\label{classobject_canvas_handler_ade7bec0af6af35cf05d17b410fd2b699} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the canvas used to select the object at which the robot is looking. Toggle buttons are used to select the object and a submit button is used to submit the answer. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Unity projects/\+TCD Robot Gaze/\+Simulations/\+Robot Gaze/\+Assets/object\+Canvas\+Handler.\+cs\end{DoxyCompactItemize}

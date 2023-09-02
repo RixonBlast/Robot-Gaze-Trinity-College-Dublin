@@ -1,0 +1,116 @@
+\doxysection{game\+Manager Class Reference}
+\hypertarget{classgame_manager}{}\label{classgame_manager}\index{gameManager@{gameManager}}
+
+
+This class utilizes the state machine principle to manage the simulation flow. Each state corresponds to a transition point, an instruction page, or a robot simulation with a question-\/answer user interface. Each state has input and output instructions, as well as looping instructions to execute. The transition state is a special state where transitions occur. It allows waiting for animation completion before proceeding with other states.  
+
+
+Inheritance diagram for game\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgame_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_manager_a219a1ea3d89c4a3212839b80be06cca6}{Shuffle}} (List$<$ int $>$ order)
+\begin{DoxyCompactList}\small\item\em This method is used to shuffle a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classgame_manager_ab64342cc821ecbf0dcb4757ddb3828d6}\label{classgame_manager_ab64342cc821ecbf0dcb4757ddb3828d6} 
+System.\+Random {\bfseries rng} = new System.\+Random()
+\begin{DoxyCompactList}\small\item\em System.\+Random instance for generating random values. \end{DoxyCompactList}\item 
+\Hypertarget{classgame_manager_af1f004dfe397a6a08a53da8d7cc90890}\label{classgame_manager_af1f004dfe397a6a08a53da8d7cc90890} 
+\mbox{\hyperlink{classeyes_handler}{eyes\+Handler}} {\bfseries eyes\+Handler}
+\item 
+\Hypertarget{classgame_manager_a54398a3cc65e5292ca26ebdf299be421}\label{classgame_manager_a54398a3cc65e5292ca26ebdf299be421} 
+\mbox{\hyperlink{classhead_state}{head\+State}} {\bfseries head\+Handler}
+\item 
+\Hypertarget{classgame_manager_af773a945dff043eb501eaf8a4534439f}\label{classgame_manager_af773a945dff043eb501eaf8a4534439f} 
+\mbox{\hyperlink{classcamera_handler}{camera\+Handler}} {\bfseries camera\+Handler}
+\item 
+\Hypertarget{classgame_manager_adfb5664864c51b966fea1a00a3cdf00e}\label{classgame_manager_adfb5664864c51b966fea1a00a3cdf00e} 
+\mbox{\hyperlink{classmain_canvas_handler}{main\+Canvas\+Handler}} {\bfseries canvas\+Handler}
+\item 
+\Hypertarget{classgame_manager_a6305070bbca93438910e8fc598de5bac}\label{classgame_manager_a6305070bbca93438910e8fc598de5bac} 
+\mbox{\hyperlink{classslider_canvas_handler}{slider\+Canvas\+Handler}} {\bfseries slider\+Canvas\+Handler}
+\item 
+\Hypertarget{classgame_manager_abaf100324428b953c77d30a501b60171}\label{classgame_manager_abaf100324428b953c77d30a501b60171} 
+\mbox{\hyperlink{classobject_canvas_handler}{object\+Canvas\+Handler}} {\bfseries object\+Canvas\+Handler}
+\item 
+\Hypertarget{classgame_manager_a543d80332a3898b98691f55847d21952}\label{classgame_manager_a543d80332a3898b98691f55847d21952} 
+\mbox{\hyperlink{classslider_handler}{slider\+Handler}} {\bfseries slider}
+\item 
+\Hypertarget{classgame_manager_a4e9f1980ac32b5b08e2573d326dead13}\label{classgame_manager_a4e9f1980ac32b5b08e2573d326dead13} 
+\mbox{\hyperlink{classobject_instruction_handler}{object\+Instruction\+Handler}} {\bfseries object\+Instruction\+Handler}
+\item 
+\Hypertarget{classgame_manager_a37ee2fd5890265f588406854d643585f}\label{classgame_manager_a37ee2fd5890265f588406854d643585f} 
+\mbox{\hyperlink{classslider_instruction_handler}{slider\+Instruction\+Handler}} {\bfseries slider\+Instruction\+Handler}
+\item 
+\Hypertarget{classgame_manager_af719ba7cc103f99165bb7effccdd46eb}\label{classgame_manager_af719ba7cc103f99165bb7effccdd46eb} 
+Text\+Mesh\+Pro\+UGUI {\bfseries instructions0}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Text\+Mesh\+Pro\+UGUI}} component used for the instruction of the current instruction page. \end{DoxyCompactList}\item 
+\Hypertarget{classgame_manager_a064f5c1c93c5a54ccb081f47f99e545a}\label{classgame_manager_a064f5c1c93c5a54ccb081f47f99e545a} 
+Text\+Mesh\+Pro\+UGUI {\bfseries instructions1}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Text\+Mesh\+Pro\+UGUI}} component used for the instruction of the next instruction page. \end{DoxyCompactList}\item 
+\Hypertarget{classgame_manager_a541879d989bea7376e2208c3f0464989}\label{classgame_manager_a541879d989bea7376e2208c3f0464989} 
+List$<$ int $>$ {\bfseries order0}
+\begin{DoxyCompactList}\small\item\em List containing the random sequence of eye and head positions combinations for the Robot for the first part of the procedure. \end{DoxyCompactList}\item 
+\Hypertarget{classgame_manager_a22f5cef8b58ab74e9d7e207a123963a6}\label{classgame_manager_a22f5cef8b58ab74e9d7e207a123963a6} 
+List$<$ int $>$ {\bfseries order1}
+\begin{DoxyCompactList}\small\item\em List containing the random sequence of eye and head positions combinations for the Robot for the second part of the procedure. \end{DoxyCompactList}\item 
+\Hypertarget{classgame_manager_ae0c99ec22b3272cc1a5c06bf5d66ddf8}\label{classgame_manager_ae0c99ec22b3272cc1a5c06bf5d66ddf8} 
+int {\bfseries state}
+\begin{DoxyCompactList}\small\item\em The index corresponding to the state the simulation is currently playing. \end{DoxyCompactList}\item 
+\Hypertarget{classgame_manager_a1c2c359bca89ea008789ffd6bf9a4b0c}\label{classgame_manager_a1c2c359bca89ea008789ffd6bf9a4b0c} 
+int {\bfseries nb\+Test}
+\begin{DoxyCompactList}\small\item\em The total number of test that the user will have to complete in each procedure. A test is bounded by instruction pages. \end{DoxyCompactList}\item 
+\Hypertarget{classgame_manager_a64b54d99f961276619128cc457bb81fa}\label{classgame_manager_a64b54d99f961276619128cc457bb81fa} 
+int {\bfseries test\+Index}
+\begin{DoxyCompactList}\small\item\em The index of the test that is taking place. \end{DoxyCompactList}\item 
+\Hypertarget{classgame_manager_a2885cfc5aa940f14f72aa176a5c38045}\label{classgame_manager_a2885cfc5aa940f14f72aa176a5c38045} 
+int {\bfseries nb\+Possibilities}
+\begin{DoxyCompactList}\small\item\em The number of different possible combinations for the test randomizer to randomize them. \end{DoxyCompactList}\item 
+\Hypertarget{classgame_manager_ab0e04e84e2cd81fe476d4fb664165474}\label{classgame_manager_ab0e04e84e2cd81fe476d4fb664165474} 
+bool {\bfseries transition\+State}
+\begin{DoxyCompactList}\small\item\em When set to true the transition state will be. \end{DoxyCompactList}\item 
+\Hypertarget{classgame_manager_a8d4bb04094eb309de2cbf6639312f276}\label{classgame_manager_a8d4bb04094eb309de2cbf6639312f276} 
+bool {\bfseries state\+Entry}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classgame_manager_a8c39d69eb8415a967c5448f5f60b4a58}\label{classgame_manager_a8c39d69eb8415a967c5448f5f60b4a58} 
+void {\bfseries Start} ()
+\item 
+\Hypertarget{classgame_manager_ab363e37721375ad28d1b1e99652fb1f6}\label{classgame_manager_ab363e37721375ad28d1b1e99652fb1f6} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class utilizes the state machine principle to manage the simulation flow. Each state corresponds to a transition point, an instruction page, or a robot simulation with a question-\/answer user interface. Each state has input and output instructions, as well as looping instructions to execute. The transition state is a special state where transitions occur. It allows waiting for animation completion before proceeding with other states. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgame_manager_a219a1ea3d89c4a3212839b80be06cca6}\label{classgame_manager_a219a1ea3d89c4a3212839b80be06cca6} 
+\index{gameManager@{gameManager}!Shuffle@{Shuffle}}
+\index{Shuffle@{Shuffle}!gameManager@{gameManager}}
+\doxysubsubsection{\texorpdfstring{Shuffle()}{Shuffle()}}
+{\footnotesize\ttfamily void game\+Manager.\+Shuffle (\begin{DoxyParamCaption}\item[{List$<$ int $>$}]{order }\end{DoxyParamCaption})}
+
+
+
+This method is used to shuffle a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & This is the list that will be shuffled by the method\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Unity projects/\+TCD Robot Gaze/\+Simulations/\+Robot Gaze/\+Assets/game\+Manager.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,111 @@
+\doxysection{right\+Button\+Handler Class Reference}
+\hypertarget{classright_button_handler}{}\label{classright_button_handler}\index{rightButtonHandler@{rightButtonHandler}}
+
+
+Handles the right button of the main canvas used to give instruction to the user. This class only handles the visual aspect of the button. The right button is used to go to the next slide. It appears white when the mouse is hovering it and in a dark blue color when it is not hovered by the mouse. The right button disappears when there is no page to go to.  
+
+
+Inheritance diagram for right\+Button\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classright_button_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classright_button_handler_a55bfac0845d66c45ab72f34617703f64}{On\+Pointer\+Enter}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em This method detects when the mouse enters the button\textquotesingle{}s hitbox and applies the white texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classright_button_handler_a5a7bf29d3852d42943611c842a2634f2}{On\+Pointer\+Exit}} (Pointer\+Event\+Data event\+Date)
+\begin{DoxyCompactList}\small\item\em This method detects when the mouse exits the button\textquotesingle{}s hitbox and applies the darker texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classright_button_handler_a9e4e41ac97576773ee41ea6eb938fae3}{set\+Button\+Enabled}} (bool value)
+\begin{DoxyCompactList}\small\item\em This methods allows to enable or disable the right button. It shall be disabled when there is no next instruction to go to. Basically at the end of the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classright_button_handler_a772558c32b548a36aa3af511de2c4853}\label{classright_button_handler_a772558c32b548a36aa3af511de2c4853} 
+Game\+Object {\bfseries right\+Arrow}
+\begin{DoxyCompactList}\small\item\em Reference to the right button\textquotesingle{}s arrow\textquotesingle{}s {\bfseries{Game\+Object}} \end{DoxyCompactList}\item 
+\Hypertarget{classright_button_handler_a1d7154bfc231eccd974c68b91db194f8}\label{classright_button_handler_a1d7154bfc231eccd974c68b91db194f8} 
+Raw\+Image {\bfseries right\+Arrow\+\_\+raw\+Image}
+\begin{DoxyCompactList}\small\item\em Component to which will be assigned the texture of the button, that is an arrow. \end{DoxyCompactList}\item 
+\Hypertarget{classright_button_handler_ad27bcc4a7a12b974e41a3ef9b4d19ade}\label{classright_button_handler_ad27bcc4a7a12b974e41a3ef9b4d19ade} 
+Texture2D {\bfseries right\+Arrow\+\_\+raw\+Image\+On\+\_\+texture}
+\begin{DoxyCompactList}\small\item\em Texture for the white version of the button. \end{DoxyCompactList}\item 
+\Hypertarget{classright_button_handler_a15945aea9f71a09e9e9cdd5a735381d9}\label{classright_button_handler_a15945aea9f71a09e9e9cdd5a735381d9} 
+Texture2D {\bfseries right\+Arrow\+\_\+raw\+Image\+Off\+\_\+texture}
+\begin{DoxyCompactList}\small\item\em Texture for the darker version of the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classright_button_handler_a1f2f84300ba0631997ce8271167713f0}\label{classright_button_handler_a1f2f84300ba0631997ce8271167713f0} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\Hypertarget{classright_button_handler_acc349bba35300c7f44e74ce09d3b347d}\label{classright_button_handler_acc349bba35300c7f44e74ce09d3b347d} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the right button of the main canvas used to give instruction to the user. This class only handles the visual aspect of the button. The right button is used to go to the next slide. It appears white when the mouse is hovering it and in a dark blue color when it is not hovered by the mouse. The right button disappears when there is no page to go to. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classright_button_handler_a55bfac0845d66c45ab72f34617703f64}\label{classright_button_handler_a55bfac0845d66c45ab72f34617703f64} 
+\index{rightButtonHandler@{rightButtonHandler}!OnPointerEnter@{OnPointerEnter}}
+\index{OnPointerEnter@{OnPointerEnter}!rightButtonHandler@{rightButtonHandler}}
+\doxysubsubsection{\texorpdfstring{OnPointerEnter()}{OnPointerEnter()}}
+{\footnotesize\ttfamily void right\+Button\+Handler.\+On\+Pointer\+Enter (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})}
+
+
+
+This method detects when the mouse enters the button\textquotesingle{}s hitbox and applies the white texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Event payload associatied with pointer but it isn\textquotesingle{}t used in the method. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classright_button_handler_a5a7bf29d3852d42943611c842a2634f2}\label{classright_button_handler_a5a7bf29d3852d42943611c842a2634f2} 
+\index{rightButtonHandler@{rightButtonHandler}!OnPointerExit@{OnPointerExit}}
+\index{OnPointerExit@{OnPointerExit}!rightButtonHandler@{rightButtonHandler}}
+\doxysubsubsection{\texorpdfstring{OnPointerExit()}{OnPointerExit()}}
+{\footnotesize\ttfamily void right\+Button\+Handler.\+On\+Pointer\+Exit (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Date }\end{DoxyParamCaption})}
+
+
+
+This method detects when the mouse exits the button\textquotesingle{}s hitbox and applies the darker texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Event payload associatied with pointer but it isn\textquotesingle{}t used in the method. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classright_button_handler_a9e4e41ac97576773ee41ea6eb938fae3}\label{classright_button_handler_a9e4e41ac97576773ee41ea6eb938fae3} 
+\index{rightButtonHandler@{rightButtonHandler}!setButtonEnabled@{setButtonEnabled}}
+\index{setButtonEnabled@{setButtonEnabled}!rightButtonHandler@{rightButtonHandler}}
+\doxysubsubsection{\texorpdfstring{setButtonEnabled()}{setButtonEnabled()}}
+{\footnotesize\ttfamily void right\+Button\+Handler.\+set\+Button\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+This methods allows to enable or disable the right button. It shall be disabled when there is no next instruction to go to. Basically at the end of the simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & If value is set to true the right button will be enabled, if false then it will be disabled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Unity projects/\+TCD Robot Gaze/\+Simulations/\+Robot Gaze/\+Assets/right\+Button\+Handler.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,111 @@
+\doxysection{left\+Button\+Handler Class Reference}
+\hypertarget{classleft_button_handler}{}\label{classleft_button_handler}\index{leftButtonHandler@{leftButtonHandler}}
+
+
+Handles the left button of the main canvas used to give instruction to the user. This class only handles the visual aspect of the button. The left button is used to go back to the previous slide. It appears white when the mouse is hovering it and in a dark blue color when it is not hovered by the mouse. The left button disappears when there is no page to go back to.  
+
+
+Inheritance diagram for left\+Button\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classleft_button_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classleft_button_handler_aaa540208f647c7907cfc0107f4662439}{On\+Pointer\+Enter}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em This method detects when the mouse enters the button\textquotesingle{}s hitbox and applies the white texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classleft_button_handler_a86d5eff9ba9f6bdb4f0d415e2584da95}{On\+Pointer\+Exit}} (Pointer\+Event\+Data event\+Date)
+\begin{DoxyCompactList}\small\item\em This method detects when the mouse exits the button\textquotesingle{}s hitbox and applies the darker texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classleft_button_handler_a07602f842906e9fc298ca9ad171882f6}{set\+Button\+Enabled}} (bool value)
+\begin{DoxyCompactList}\small\item\em This methods allows to enable or disable the left button. It shall be disabled when there is no previous instruction slide to go back to and enabled otherwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classleft_button_handler_a66abb95e8369685561ea8d445c55be35}\label{classleft_button_handler_a66abb95e8369685561ea8d445c55be35} 
+Game\+Object {\bfseries left\+Arrow}
+\begin{DoxyCompactList}\small\item\em Reference to the left button\textquotesingle{}s arrow\textquotesingle{}s Game\+Object. \end{DoxyCompactList}\item 
+\Hypertarget{classleft_button_handler_a12e785a957c4e7074917fa052ac9d06e}\label{classleft_button_handler_a12e785a957c4e7074917fa052ac9d06e} 
+Raw\+Image {\bfseries left\+Arrow\+\_\+raw\+Image}
+\begin{DoxyCompactList}\small\item\em Component to which will be assigned the texture of the button, that is an arrow. \end{DoxyCompactList}\item 
+\Hypertarget{classleft_button_handler_a60581aaec028f9f79c6a5bb2fe28f5c5}\label{classleft_button_handler_a60581aaec028f9f79c6a5bb2fe28f5c5} 
+Texture2D {\bfseries left\+Arrow\+\_\+raw\+Image\+On\+\_\+texture}
+\begin{DoxyCompactList}\small\item\em Texture for the white version of the button. \end{DoxyCompactList}\item 
+\Hypertarget{classleft_button_handler_a60a2571781a33508625c9daf87e915fb}\label{classleft_button_handler_a60a2571781a33508625c9daf87e915fb} 
+Texture2D {\bfseries left\+Arrow\+\_\+raw\+Image\+Off\+\_\+texture}
+\begin{DoxyCompactList}\small\item\em Texture for the darker version of the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classleft_button_handler_aec3466bfc7db864827ff57cb3fa606b0}\label{classleft_button_handler_aec3466bfc7db864827ff57cb3fa606b0} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\Hypertarget{classleft_button_handler_a5e2ad8f2f43bf37353943d1edbb11a65}\label{classleft_button_handler_a5e2ad8f2f43bf37353943d1edbb11a65} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the left button of the main canvas used to give instruction to the user. This class only handles the visual aspect of the button. The left button is used to go back to the previous slide. It appears white when the mouse is hovering it and in a dark blue color when it is not hovered by the mouse. The left button disappears when there is no page to go back to. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classleft_button_handler_aaa540208f647c7907cfc0107f4662439}\label{classleft_button_handler_aaa540208f647c7907cfc0107f4662439} 
+\index{leftButtonHandler@{leftButtonHandler}!OnPointerEnter@{OnPointerEnter}}
+\index{OnPointerEnter@{OnPointerEnter}!leftButtonHandler@{leftButtonHandler}}
+\doxysubsubsection{\texorpdfstring{OnPointerEnter()}{OnPointerEnter()}}
+{\footnotesize\ttfamily void left\+Button\+Handler.\+On\+Pointer\+Enter (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})}
+
+
+
+This method detects when the mouse enters the button\textquotesingle{}s hitbox and applies the white texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Event payload associatied with pointer but it isn\textquotesingle{}t used in the method. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classleft_button_handler_a86d5eff9ba9f6bdb4f0d415e2584da95}\label{classleft_button_handler_a86d5eff9ba9f6bdb4f0d415e2584da95} 
+\index{leftButtonHandler@{leftButtonHandler}!OnPointerExit@{OnPointerExit}}
+\index{OnPointerExit@{OnPointerExit}!leftButtonHandler@{leftButtonHandler}}
+\doxysubsubsection{\texorpdfstring{OnPointerExit()}{OnPointerExit()}}
+{\footnotesize\ttfamily void left\+Button\+Handler.\+On\+Pointer\+Exit (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Date }\end{DoxyParamCaption})}
+
+
+
+This method detects when the mouse exits the button\textquotesingle{}s hitbox and applies the darker texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Event payload associatied with pointer but it isn\textquotesingle{}t used in the method. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classleft_button_handler_a07602f842906e9fc298ca9ad171882f6}\label{classleft_button_handler_a07602f842906e9fc298ca9ad171882f6} 
+\index{leftButtonHandler@{leftButtonHandler}!setButtonEnabled@{setButtonEnabled}}
+\index{setButtonEnabled@{setButtonEnabled}!leftButtonHandler@{leftButtonHandler}}
+\doxysubsubsection{\texorpdfstring{setButtonEnabled()}{setButtonEnabled()}}
+{\footnotesize\ttfamily void left\+Button\+Handler.\+set\+Button\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+This methods allows to enable or disable the left button. It shall be disabled when there is no previous instruction slide to go back to and enabled otherwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & If value is set to true the left button will be enabled, if false then it will be disabled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Unity projects/\+TCD Robot Gaze/\+Simulations/\+Robot Gaze/\+Assets/left\+Button\+Handler.\+cs\end{DoxyCompactItemize}
