@@ -7,4 +7,8 @@
 ## If you want to import the project in order to review it
 * Clone the repository on your computer and open the folder with Unity version 2021.3.23f1.
 
+## Access the [documentation here](https://github.com/RixonBlast/Robot-Gaze-Trinity-College-Dublin/Documentation/html/index.html))
+
+## Important things:
+* To
 If you need any question please email me at "Thomas.EKINDY_NDAME@etu.uca.fr".
