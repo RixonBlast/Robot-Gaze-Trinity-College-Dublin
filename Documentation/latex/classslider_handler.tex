@@ -1,0 +1,80 @@
+\doxysection{slider\+Handler Class Reference}
+\hypertarget{classslider_handler}{}\label{classslider_handler}\index{sliderHandler@{sliderHandler}}
+
+
+Handles the slider that the user will have to use to place himself where he feels looked at by the robot.  
+
+
+Inheritance diagram for slider\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classslider_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classslider_handler_a0fc9306c5d15c1811d26483f6ea2f13e}\label{classslider_handler_a0fc9306c5d15c1811d26483f6ea2f13e} 
+void {\bfseries On\+Slider\+Change} ()
+\begin{DoxyCompactList}\small\item\em This method is called whenever the value of the slider changes and it moves the camera depending on this value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classslider_handler_a4ea8a98a825cb29dedf2ead71c84d8dd}{set\+Slider\+Enabled}} (bool value)
+\begin{DoxyCompactList}\small\item\em This method is called to allow or prevent the arrow keys to move the slider. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classslider_handler_ae574f5979f55da79c0fa60480c028e50}\label{classslider_handler_ae574f5979f55da79c0fa60480c028e50} 
+\mbox{\hyperlink{classcamera_handler}{camera\+Handler}} {\bfseries camera\+Handler}
+\begin{DoxyCompactList}\small\item\em Instance of the class handling the camera. \end{DoxyCompactList}\item 
+\Hypertarget{classslider_handler_a4553860d16cbbbda03786402e0238d76}\label{classslider_handler_a4553860d16cbbbda03786402e0238d76} 
+Slider {\bfseries slider}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Slider}} component used to create the slider. \end{DoxyCompactList}\item 
+\Hypertarget{classslider_handler_a1d69116c6bec48b545a45c27113401b7}\label{classslider_handler_a1d69116c6bec48b545a45c27113401b7} 
+Transform {\bfseries camera\+\_\+transform}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Transform}} component used to position the camera. \end{DoxyCompactList}\item 
+\Hypertarget{classslider_handler_a66c86583d958791b8ab3bd86f2808044}\label{classslider_handler_a66c86583d958791b8ab3bd86f2808044} 
+float {\bfseries arrows\+Motion\+Speed}
+\begin{DoxyCompactList}\small\item\em The speed at which the camera will be moving from pressing the keys. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classslider_handler_a64a9a81e0205ee15f24c7589d061a093}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\Hypertarget{classslider_handler_a545b211f3ffba833eb5a1d5653be8642}\label{classslider_handler_a545b211f3ffba833eb5a1d5653be8642} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the slider that the user will have to use to place himself where he feels looked at by the robot. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classslider_handler_a4ea8a98a825cb29dedf2ead71c84d8dd}\label{classslider_handler_a4ea8a98a825cb29dedf2ead71c84d8dd} 
+\index{sliderHandler@{sliderHandler}!setSliderEnabled@{setSliderEnabled}}
+\index{setSliderEnabled@{setSliderEnabled}!sliderHandler@{sliderHandler}}
+\doxysubsubsection{\texorpdfstring{setSliderEnabled()}{setSliderEnabled()}}
+{\footnotesize\ttfamily void slider\+Handler.\+set\+Slider\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+This method is called to allow or prevent the arrow keys to move the slider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & When it is set to {\bfseries{true}} it allows the arrow keys to move the slider. When it is set to {\bfseries{false}} it prevents them to do so. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classslider_handler_a64a9a81e0205ee15f24c7589d061a093}\label{classslider_handler_a64a9a81e0205ee15f24c7589d061a093} 
+\index{sliderHandler@{sliderHandler}!Start@{Start}}
+\index{Start@{Start}!sliderHandler@{sliderHandler}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void slider\+Handler.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start is called before the first frame update. 
+
+--- Customizable camera parameters instantiation ---
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Unity projects/\+TCD Robot Gaze/\+Simulations/\+Robot Gaze/\+Assets/slider\+Handler.\+cs\end{DoxyCompactItemize}

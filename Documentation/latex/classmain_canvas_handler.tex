@@ -1,0 +1,331 @@
+\doxysection{main\+Canvas\+Handler Class Reference}
+\hypertarget{classmain_canvas_handler}{}\label{classmain_canvas_handler}\index{mainCanvasHandler@{mainCanvasHandler}}
+
+
+Handles the main canvas used for giving instructions to the user. It handles the instruction animation, the background animation and.  
+
+
+Inheritance diagram for main\+Canvas\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmain_canvas_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmain_canvas_handler_aa770336bae0a47cf243a827eae9ef4fc}{on\+Main\+Canvas\+Translation\+Out\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em This method is called when the main canvas is finished translating out of the screen. It updates the value of the flag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_canvas_handler_afe6cb4aacbf6dae34958fe898dbce467}{on\+Main\+Canvas\+Translation\+In\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em This method is called when the main canvas is finished translating on the screen. It updates the value of the flag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_canvas_handler_aa29f5b39c69e6f50a25fa0a49f3b268c}{main\+Canvas\+Translation\+In}} ()
+\begin{DoxyCompactList}\small\item\em This method is called when at the moment main canvas begins to translate on the screen. It rotates the canvas in order to make the waves drawn on the background image of the main canvas appear on the screen during the translation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_canvas_handler_a2eef47e7400425cb27ed4e0307f99898}{main\+Canvas\+Translation\+Out}} ()
+\begin{DoxyCompactList}\small\item\em This method is called when at the moment main canvas begins to translate out of the screen. It rotates the canvas in order to make the waves drawn on the background image of the main canvas appear on the screen during the translation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_canvas_handler_a26866b326013b76a2bec4ec29a0f3bf0}{on\+Click\+Right\+Main\+Canvas}} ()
+\begin{DoxyCompactList}\small\item\em This method is called when the right button is pressed. It updates the {\bfseries{right\+Clicked}} flag. This flag will be updated to false once the class {\bfseries{\doxylink{classgame_manager}{game\+Manager}}} has handled it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_canvas_handler_aa4bddd7b6423abddfb1e5d5c41262f6a}{on\+Click\+Left\+Main\+Canvas}} ()
+\begin{DoxyCompactList}\small\item\em This method is called when the left button is pressed. It updates the {\bfseries{left\+Clicked}} flag. This flag will be updated to false once the class {\bfseries{\doxylink{classgame_manager}{game\+Manager}}} has handled it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_canvas_handler_a08dbdbacc224dbc6624775544962fa3f}{set\+Texts}} (String text1, String text2)
+\begin{DoxyCompactList}\small\item\em This method is used to set both text instructions. Note that the first text instruction is the one that is currently displayed on the main canvas and the second one is the one that will replace the other when switching to either the previous or the next slide. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_canvas_handler_a851f335e4dbc0c8f862690c60882d75b}{set\+Text}} (int num\+Text, String text)
+\begin{DoxyCompactList}\small\item\em This method is used to set one of the two text instructions. Note that the first text instruction is the one that is currently displayed on the main canvas and the second one is the one that will replace the other when switching to either the previous or the next slide. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_canvas_handler_a373aa223b9c6ec0f9be22c9a0706395d}{set\+Text\+Properties}} (int num\+Text, float size, Text\+Alignment\+Options alignment, Font\+Styles style)
+\begin{DoxyCompactList}\small\item\em This method is used to set one of the two text instructions\textquotesingle{} properties. Note that the first text instruction is the one that is currently displayed on the main canvas and the second one is the one that will replace the other when switching to either the previous or the next slide. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_adee87a1fbccf25259b57eb7a2dd6a8e4}\label{classmain_canvas_handler_adee87a1fbccf25259b57eb7a2dd6a8e4} 
+void {\bfseries reverse\+Texts} ()
+\begin{DoxyCompactList}\small\item\em This method reverses the content and settings of both the texts instruction. It is used after the two texts are finished translating and at the moment each of them goes back to its initial location to simulate them switching places. \begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_canvas_handler_a17273b4274d55a5e4905ef0e39292060}{texts\+Translation\+Right}} ()
+\begin{DoxyCompactList}\small\item\em This method is called to start the animation of translation of the texts from the right to the left (switching to the next slide). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_canvas_handler_a7e25950bf0e61e79618a5824eba56a27}{texts\+Translation\+Left}} ()
+\begin{DoxyCompactList}\small\item\em This method is called to start the animation of translation of the texts from the left to the right (switching to the previous slide). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_canvas_handler_af7600306069335f621fbab9c4d3ab99f}{on\+Texts\+Translation\+Right\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em This method is called when the animation of translating of the texts from the right to the left (switching to the next slide) is finished. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_canvas_handler_a7b71821c5cc33e51fb1b9968bed6323a}{on\+Texts\+Translation\+Left\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em This method is called when the animation of translating of the texts from the left to the right (switching to the previous slide) is finished. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_canvas_handler_a413b67302fcb1b65e212343e40e6bbd3}{set\+Buttons\+Enabled}} (bool left\+Button\+Enabled, bool right\+Button\+Enabled)
+\begin{DoxyCompactList}\small\item\em This methodsis used to enable or disable each buttons separately. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmain_canvas_handler_af7b925abedd9fcf4a139c083aa2c7d20}\label{classmain_canvas_handler_af7b925abedd9fcf4a139c083aa2c7d20} 
+\mbox{\hyperlink{classleft_button_handler}{left\+Button\+Handler}} {\bfseries left\+Button\+\_\+handler}
+\begin{DoxyCompactList}\small\item\em Instance of the class handling the left button of the main canvas. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_a83ef9befbebcc85cc31575f9160c5571}\label{classmain_canvas_handler_a83ef9befbebcc85cc31575f9160c5571} 
+\mbox{\hyperlink{classright_button_handler}{right\+Button\+Handler}} {\bfseries right\+Button\+\_\+handler}
+\begin{DoxyCompactList}\small\item\em Instance of the class handling the right button of the main canvas. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_a112c9cd0d78c2a8165c66cb6a2aa3b74}\label{classmain_canvas_handler_a112c9cd0d78c2a8165c66cb6a2aa3b74} 
+Rect\+Transform {\bfseries background\+Image\+\_\+rect\+Transform}
+\begin{DoxyCompactList}\small\item\em The Rect\+Transform component used to position the blue background of the main canvas. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_a92efa6b9a4d0aea09244dcdf4eb6fe74}\label{classmain_canvas_handler_a92efa6b9a4d0aea09244dcdf4eb6fe74} 
+Rect\+Transform {\bfseries main\+Canvas\+\_\+rect\+Transform}
+\begin{DoxyCompactList}\small\item\em The Rect\+Transform component used to position the main canvas itself. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_a37dd69ad5f489ab0670deb46d31fa94c}\label{classmain_canvas_handler_a37dd69ad5f489ab0670deb46d31fa94c} 
+Transform {\bfseries instructions0\+\_\+transform}
+\begin{DoxyCompactList}\small\item\em The Transform component used to position the first text instruction area. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_a6324c4b6cd9d768849a9e92ac07ede51}\label{classmain_canvas_handler_a6324c4b6cd9d768849a9e92ac07ede51} 
+Transform {\bfseries instructions1\+\_\+transform}
+\begin{DoxyCompactList}\small\item\em The transform component used to position the second text instruction area. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_a94f64bcfb14898de0fe13af7584fe264}\label{classmain_canvas_handler_a94f64bcfb14898de0fe13af7584fe264} 
+Animator {\bfseries anim}
+\begin{DoxyCompactList}\small\item\em The animator used to animate the sliding of the instructions and the sliding of the whole main canvas. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_abdd4fe5d831e0bdffebe59dbe90175bc}\label{classmain_canvas_handler_abdd4fe5d831e0bdffebe59dbe90175bc} 
+Text\+Mesh\+Pro\+UGUI {\bfseries instructions0}
+\begin{DoxyCompactList}\small\item\em The Text\+Mesh\+Pro\+UGUI component for the first text instruction area, used to edit the text. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_ae37e7d93bfe4dc1552e9a70197a17538}\label{classmain_canvas_handler_ae37e7d93bfe4dc1552e9a70197a17538} 
+Text\+Mesh\+Pro\+UGUI {\bfseries instructions1}
+\begin{DoxyCompactList}\small\item\em The Text\+Mesh\+Pro\+UGUI component for the second text instruction area, used to edit the text. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_a20760058d87397fa12fa68efe3b289b9}\label{classmain_canvas_handler_a20760058d87397fa12fa68efe3b289b9} 
+bool {\bfseries main\+Canvas\+Translation\+Out\+Finished}
+\begin{DoxyCompactList}\small\item\em Flag indicating whether yes or no the animation of the main canvas translating out of the screen is finished. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_a538064d379325a0a1b2071e7683a2d8f}\label{classmain_canvas_handler_a538064d379325a0a1b2071e7683a2d8f} 
+bool {\bfseries main\+Canvas\+Translation\+In\+Finished}
+\begin{DoxyCompactList}\small\item\em Flag indicating whether yes or no the animation of the main canvas translating on the screen is finished. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_a0790e24424c6d9832c61e98020b4fd80}\label{classmain_canvas_handler_a0790e24424c6d9832c61e98020b4fd80} 
+bool {\bfseries texts\+Translation\+Right\+Finished}
+\begin{DoxyCompactList}\small\item\em Flag indicating whether yes or no the animation of the instruction translating from the right to the left (switching to the next slide) is finished. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_aff9abb98c39cb0cf2e6648345116e67a}\label{classmain_canvas_handler_aff9abb98c39cb0cf2e6648345116e67a} 
+bool {\bfseries texts\+Translation\+Left\+Finished}
+\begin{DoxyCompactList}\small\item\em Flag indicating whether yes or no the animation of the instruction translating from the left to the right (switching to the previous slide) is finished. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_a88e8917c53ab49ee808b19f96f86256b}\label{classmain_canvas_handler_a88e8917c53ab49ee808b19f96f86256b} 
+bool {\bfseries right\+Clicked}
+\begin{DoxyCompactList}\small\item\em Flag indicating if the right button has been clicked on or not. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_ac84fd3f328e46ded4c65d69d2eea0353}\label{classmain_canvas_handler_ac84fd3f328e46ded4c65d69d2eea0353} 
+bool {\bfseries left\+Clicked}
+\begin{DoxyCompactList}\small\item\em Flag indicating if the left button has been clicked on or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmain_canvas_handler_a6179a853287310a39495cbe0721df5de}\label{classmain_canvas_handler_a6179a853287310a39495cbe0721df5de} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\Hypertarget{classmain_canvas_handler_a2d77f31301286656997751734645f63e}\label{classmain_canvas_handler_a2d77f31301286656997751734645f63e} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmain_canvas_handler_aec5aa6dd1e9987e3f3dd2e2b0a0c12db}\label{classmain_canvas_handler_aec5aa6dd1e9987e3f3dd2e2b0a0c12db} 
+Vector2 {\bfseries main\+Canvas\+Anchored\+Position}
+\begin{DoxyCompactList}\small\item\em Final position, relatively to its parent, that the main canvas will take once its animation of translating in will be finished. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the main canvas used for giving instructions to the user. It handles the instruction animation, the background animation and. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmain_canvas_handler_aa29f5b39c69e6f50a25fa0a49f3b268c}\label{classmain_canvas_handler_aa29f5b39c69e6f50a25fa0a49f3b268c} 
+\index{mainCanvasHandler@{mainCanvasHandler}!mainCanvasTranslationIn@{mainCanvasTranslationIn}}
+\index{mainCanvasTranslationIn@{mainCanvasTranslationIn}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{mainCanvasTranslationIn()}{mainCanvasTranslationIn()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+main\+Canvas\+Translation\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is called when at the moment main canvas begins to translate on the screen. It rotates the canvas in order to make the waves drawn on the background image of the main canvas appear on the screen during the translation. 
+
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classmain_canvas_handler_a2eef47e7400425cb27ed4e0307f99898}\label{classmain_canvas_handler_a2eef47e7400425cb27ed4e0307f99898} 
+\index{mainCanvasHandler@{mainCanvasHandler}!mainCanvasTranslationOut@{mainCanvasTranslationOut}}
+\index{mainCanvasTranslationOut@{mainCanvasTranslationOut}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{mainCanvasTranslationOut()}{mainCanvasTranslationOut()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+main\+Canvas\+Translation\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is called when at the moment main canvas begins to translate out of the screen. It rotates the canvas in order to make the waves drawn on the background image of the main canvas appear on the screen during the translation. 
+
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classmain_canvas_handler_aa4bddd7b6423abddfb1e5d5c41262f6a}\label{classmain_canvas_handler_aa4bddd7b6423abddfb1e5d5c41262f6a} 
+\index{mainCanvasHandler@{mainCanvasHandler}!onClickLeftMainCanvas@{onClickLeftMainCanvas}}
+\index{onClickLeftMainCanvas@{onClickLeftMainCanvas}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{onClickLeftMainCanvas()}{onClickLeftMainCanvas()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+on\+Click\+Left\+Main\+Canvas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is called when the left button is pressed. It updates the {\bfseries{left\+Clicked}} flag. This flag will be updated to false once the class {\bfseries{\doxylink{classgame_manager}{game\+Manager}}} has handled it. 
+
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classmain_canvas_handler_a26866b326013b76a2bec4ec29a0f3bf0}\label{classmain_canvas_handler_a26866b326013b76a2bec4ec29a0f3bf0} 
+\index{mainCanvasHandler@{mainCanvasHandler}!onClickRightMainCanvas@{onClickRightMainCanvas}}
+\index{onClickRightMainCanvas@{onClickRightMainCanvas}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{onClickRightMainCanvas()}{onClickRightMainCanvas()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+on\+Click\+Right\+Main\+Canvas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is called when the right button is pressed. It updates the {\bfseries{right\+Clicked}} flag. This flag will be updated to false once the class {\bfseries{\doxylink{classgame_manager}{game\+Manager}}} has handled it. 
+
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classmain_canvas_handler_afe6cb4aacbf6dae34958fe898dbce467}\label{classmain_canvas_handler_afe6cb4aacbf6dae34958fe898dbce467} 
+\index{mainCanvasHandler@{mainCanvasHandler}!onMainCanvasTranslationInFinished@{onMainCanvasTranslationInFinished}}
+\index{onMainCanvasTranslationInFinished@{onMainCanvasTranslationInFinished}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{onMainCanvasTranslationInFinished()}{onMainCanvasTranslationInFinished()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+on\+Main\+Canvas\+Translation\+In\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is called when the main canvas is finished translating on the screen. It updates the value of the flag. 
+
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classmain_canvas_handler_aa770336bae0a47cf243a827eae9ef4fc}\label{classmain_canvas_handler_aa770336bae0a47cf243a827eae9ef4fc} 
+\index{mainCanvasHandler@{mainCanvasHandler}!onMainCanvasTranslationOutFinished@{onMainCanvasTranslationOutFinished}}
+\index{onMainCanvasTranslationOutFinished@{onMainCanvasTranslationOutFinished}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{onMainCanvasTranslationOutFinished()}{onMainCanvasTranslationOutFinished()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+on\+Main\+Canvas\+Translation\+Out\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is called when the main canvas is finished translating out of the screen. It updates the value of the flag. 
+
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classmain_canvas_handler_a7b71821c5cc33e51fb1b9968bed6323a}\label{classmain_canvas_handler_a7b71821c5cc33e51fb1b9968bed6323a} 
+\index{mainCanvasHandler@{mainCanvasHandler}!onTextsTranslationLeftFinished@{onTextsTranslationLeftFinished}}
+\index{onTextsTranslationLeftFinished@{onTextsTranslationLeftFinished}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{onTextsTranslationLeftFinished()}{onTextsTranslationLeftFinished()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+on\+Texts\+Translation\+Left\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is called when the animation of translating of the texts from the left to the right (switching to the previous slide) is finished. 
+
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classmain_canvas_handler_af7600306069335f621fbab9c4d3ab99f}\label{classmain_canvas_handler_af7600306069335f621fbab9c4d3ab99f} 
+\index{mainCanvasHandler@{mainCanvasHandler}!onTextsTranslationRightFinished@{onTextsTranslationRightFinished}}
+\index{onTextsTranslationRightFinished@{onTextsTranslationRightFinished}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{onTextsTranslationRightFinished()}{onTextsTranslationRightFinished()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+on\+Texts\+Translation\+Right\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is called when the animation of translating of the texts from the right to the left (switching to the next slide) is finished. 
+
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classmain_canvas_handler_a413b67302fcb1b65e212343e40e6bbd3}\label{classmain_canvas_handler_a413b67302fcb1b65e212343e40e6bbd3} 
+\index{mainCanvasHandler@{mainCanvasHandler}!setButtonsEnabled@{setButtonsEnabled}}
+\index{setButtonsEnabled@{setButtonsEnabled}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{setButtonsEnabled()}{setButtonsEnabled()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+set\+Buttons\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{left\+Button\+Enabled,  }\item[{bool}]{right\+Button\+Enabled }\end{DoxyParamCaption})}
+
+
+
+This methodsis used to enable or disable each buttons separately. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+Button\+Enabled} & If its value is true then the left button will be enabled, otherwiste it will be disabled. \\
+\hline
+{\em rightutton\+Enabled} & If its value is true then the right button will be enabled, otherwiste it will be disabled. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmain_canvas_handler_a851f335e4dbc0c8f862690c60882d75b}\label{classmain_canvas_handler_a851f335e4dbc0c8f862690c60882d75b} 
+\index{mainCanvasHandler@{mainCanvasHandler}!setText@{setText}}
+\index{setText@{setText}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{setText()}{setText()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+set\+Text (\begin{DoxyParamCaption}\item[{int}]{num\+Text,  }\item[{String}]{text }\end{DoxyParamCaption})}
+
+
+
+This method is used to set one of the two text instructions. Note that the first text instruction is the one that is currently displayed on the main canvas and the second one is the one that will replace the other when switching to either the previous or the next slide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Text} & The number of the instruction that will be changed by the method. If its value is 0 then the first instruction will be changed, otherwise the second instruction will be changed.  
+\begin{DoxyParams}{Parameters}
+{\em text} & The new text. \begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmain_canvas_handler_a373aa223b9c6ec0f9be22c9a0706395d}\label{classmain_canvas_handler_a373aa223b9c6ec0f9be22c9a0706395d} 
+\index{mainCanvasHandler@{mainCanvasHandler}!setTextProperties@{setTextProperties}}
+\index{setTextProperties@{setTextProperties}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{setTextProperties()}{setTextProperties()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+set\+Text\+Properties (\begin{DoxyParamCaption}\item[{int}]{num\+Text,  }\item[{float}]{size,  }\item[{Text\+Alignment\+Options}]{alignment,  }\item[{Font\+Styles}]{style }\end{DoxyParamCaption})}
+
+
+
+This method is used to set one of the two text instructions\textquotesingle{} properties. Note that the first text instruction is the one that is currently displayed on the main canvas and the second one is the one that will replace the other when switching to either the previous or the next slide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Text} & The number of the instruction that will be changed by the method. If its value is 0 then the first instruction will be changed, otherwise the second instruction will be changed. \\
+\hline
+{\em size} & The font size of the text. \\
+\hline
+{\em alignment} & The alignment options for the text. \\
+\hline
+{\em style} & This is the style of the font, underlined etc... \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classmain_canvas_handler_a08dbdbacc224dbc6624775544962fa3f}\label{classmain_canvas_handler_a08dbdbacc224dbc6624775544962fa3f} 
+\index{mainCanvasHandler@{mainCanvasHandler}!setTexts@{setTexts}}
+\index{setTexts@{setTexts}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{setTexts()}{setTexts()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+set\+Texts (\begin{DoxyParamCaption}\item[{String}]{text1,  }\item[{String}]{text2 }\end{DoxyParamCaption})}
+
+
+
+This method is used to set both text instructions. Note that the first text instruction is the one that is currently displayed on the main canvas and the second one is the one that will replace the other when switching to either the previous or the next slide. 
+
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classmain_canvas_handler_a7e25950bf0e61e79618a5824eba56a27}\label{classmain_canvas_handler_a7e25950bf0e61e79618a5824eba56a27} 
+\index{mainCanvasHandler@{mainCanvasHandler}!textsTranslationLeft@{textsTranslationLeft}}
+\index{textsTranslationLeft@{textsTranslationLeft}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{textsTranslationLeft()}{textsTranslationLeft()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+texts\+Translation\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is called to start the animation of translation of the texts from the left to the right (switching to the previous slide). 
+
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classmain_canvas_handler_a17273b4274d55a5e4905ef0e39292060}\label{classmain_canvas_handler_a17273b4274d55a5e4905ef0e39292060} 
+\index{mainCanvasHandler@{mainCanvasHandler}!textsTranslationRight@{textsTranslationRight}}
+\index{textsTranslationRight@{textsTranslationRight}!mainCanvasHandler@{mainCanvasHandler}}
+\doxysubsubsection{\texorpdfstring{textsTranslationRight()}{textsTranslationRight()}}
+{\footnotesize\ttfamily void main\+Canvas\+Handler.\+texts\+Translation\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is called to start the animation of translation of the texts from the right to the left (switching to the next slide). 
+
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Unity projects/\+TCD Robot Gaze/\+Simulations/\+Robot Gaze/\+Assets/main\+Canvas\+Handler.\+cs\end{DoxyCompactItemize}

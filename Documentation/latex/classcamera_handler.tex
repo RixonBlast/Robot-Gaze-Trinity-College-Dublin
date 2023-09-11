@@ -1,0 +1,164 @@
+\doxysection{camera\+Handler Class Reference}
+\hypertarget{classcamera_handler}{}\label{classcamera_handler}\index{cameraHandler@{cameraHandler}}
+
+
+Handles the camera\textquotesingle{}s initial position and movements during the simulation.  
+
+
+Inheritance diagram for camera\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcamera_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcamera_handler_a4395f53ae5c8add6b9a9c063ddd0f2f4}{set\+Camera\+State}} (int camera\+State)
+\begin{DoxyCompactList}\small\item\em This method allows to change the angle of the position of the camera only by inputting an integer number between 0 and the value of {\bfseries{ nb\+Camera\+State -\/ 1 }}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcamera_handler_a1cc57cabd17729a210b550c03e0867ec}{set\+Camera\+Movement\+Enabled}} (bool value)
+\begin{DoxyCompactList}\small\item\em This methods allows to enable or disable the camera movement. When the camera movements are disabled the camera won\textquotesingle{}t be able to move using any of the two functions {\bfseries{set\+Camera\+Angle}} or {\bfseries{set\+Camera\+State}}, otherwise it will be possible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcamera_handler_a372830bcc9950a38445be42ba8e61762}{set\+Camera\+Angle}} (float angle)
+\begin{DoxyCompactList}\small\item\em This method allows to change the angle of the position of the camera by inputting the said angle in degrees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcamera_handler_af05ef24096c0a92b8ea919ba016a2496}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\Hypertarget{classcamera_handler_a8a56518c523c666ad8eb2e5e49e77ada}\label{classcamera_handler_a8a56518c523c666ad8eb2e5e49e77ada} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcamera_handler_a4a942e3922a12d659db88abbdf7c81d1}\label{classcamera_handler_a4a942e3922a12d659db88abbdf7c81d1} 
+Game\+Object {\bfseries robot}
+\begin{DoxyCompactList}\small\item\em Reference to the Robot Game\+Object. \end{DoxyCompactList}\item 
+\Hypertarget{classcamera_handler_a216ed0cb44cef38bac46ea5a8ccf0930}\label{classcamera_handler_a216ed0cb44cef38bac46ea5a8ccf0930} 
+Game\+Object {\bfseries game\+Manager}
+\begin{DoxyCompactList}\small\item\em Reference to the \doxylink{classgame_manager}{game\+Manager} Game\+Object. \end{DoxyCompactList}\item 
+\Hypertarget{classcamera_handler_aee6206e98baa1edf67bef8d62092855b}\label{classcamera_handler_aee6206e98baa1edf67bef8d62092855b} 
+Transform {\bfseries camera\+\_\+transform}
+\begin{DoxyCompactList}\small\item\em Camera\textquotesingle{}s transform. \end{DoxyCompactList}\item 
+\Hypertarget{classcamera_handler_a92249f5cdb136b613394643e3814f4d0}\label{classcamera_handler_a92249f5cdb136b613394643e3814f4d0} 
+Transform {\bfseries robot\+\_\+transform}
+\begin{DoxyCompactList}\small\item\em Robot\textquotesingle{}s transform. \end{DoxyCompactList}\item 
+\Hypertarget{classcamera_handler_a0b04d6d7921dd342542f1e81db329638}\label{classcamera_handler_a0b04d6d7921dd342542f1e81db329638} 
+Collider {\bfseries robot\+\_\+box\+Collider}
+\begin{DoxyCompactList}\small\item\em Robot\textquotesingle{}s Collider. \end{DoxyCompactList}\item 
+\Hypertarget{classcamera_handler_ab7742c29a6096d6534b6e3a956dcbeff}\label{classcamera_handler_ab7742c29a6096d6534b6e3a956dcbeff} 
+float {\bfseries current\+Camera\+Angle}
+\begin{DoxyCompactList}\small\item\em Current angle between the camera\textquotesingle{}s position and the robot\textquotesingle{}s vertical axis. Its value varies between 0 and 180. \end{DoxyCompactList}\item 
+\Hypertarget{classcamera_handler_a89ef0abf2b52319a4d137060e4026bd5}\label{classcamera_handler_a89ef0abf2b52319a4d137060e4026bd5} 
+bool {\bfseries camera\+Enable}
+\begin{DoxyCompactList}\small\item\em If its value is false then the camera won\textquotesingle{}t be able to move using any of the two functions, otherwise it will be possible to do so. \end{DoxyCompactList}\item 
+\Hypertarget{classcamera_handler_aca0877c8fe441b11b0c8868580435381}\label{classcamera_handler_aca0877c8fe441b11b0c8868580435381} 
+float {\bfseries camera\+Distance}
+\begin{DoxyCompactList}\small\item\em Distance between the camera and the Robot\textquotesingle{}s Game\+Object. \end{DoxyCompactList}\item 
+\Hypertarget{classcamera_handler_a4b5e813c4aae22fdbf408d6a38325eda}\label{classcamera_handler_a4b5e813c4aae22fdbf408d6a38325eda} 
+float {\bfseries camera\+Position\+Angle}
+\begin{DoxyCompactList}\small\item\em Angle in degrees for the position of the camera. It is the angle formed between the line connecting the robot\textquotesingle{}s head and the camera, and the line formed by the direction of the robot\textquotesingle{}s gaze. \end{DoxyCompactList}\item 
+\Hypertarget{classcamera_handler_a0f27ed2f55f57b183b09bec0b872a5b5}\label{classcamera_handler_a0f27ed2f55f57b183b09bec0b872a5b5} 
+float {\bfseries camera\+Orientation\+Angle}
+\begin{DoxyCompactList}\small\item\em Angle in degrees for the orientation of the camera. It is the angle formed between the line connecting the robot\textquotesingle{}s head and the camera, and the line formed by the direction of the camera\textquotesingle{}s orientation. \end{DoxyCompactList}\item 
+\Hypertarget{classcamera_handler_ae9d8b68937e806e166f84c6823f8b2ef}\label{classcamera_handler_ae9d8b68937e806e166f84c6823f8b2ef} 
+float {\bfseries angle\+View\+Amplitude}
+\begin{DoxyCompactList}\small\item\em Amplitude for the camera\textquotesingle{}s rotation around the robot in degrees. \end{DoxyCompactList}\item 
+\Hypertarget{classcamera_handler_a1150372e1e3315c47d8df7b190163b30}\label{classcamera_handler_a1150372e1e3315c47d8df7b190163b30} 
+float {\bfseries nb\+Camera\+State}
+\begin{DoxyCompactList}\small\item\em Number of different angles for the camera that will be considered when using the function set\+Camera\+State. For instance, if its value is 5, the camera can be positioned at 5 equidistant locations across the arc of the circle of angle\+View\+Amplitude degrees that is facing the robot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the camera\textquotesingle{}s initial position and movements during the simulation. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcamera_handler_a372830bcc9950a38445be42ba8e61762}\label{classcamera_handler_a372830bcc9950a38445be42ba8e61762} 
+\index{cameraHandler@{cameraHandler}!setCameraAngle@{setCameraAngle}}
+\index{setCameraAngle@{setCameraAngle}!cameraHandler@{cameraHandler}}
+\doxysubsubsection{\texorpdfstring{setCameraAngle()}{setCameraAngle()}}
+{\footnotesize\ttfamily void camera\+Handler.\+set\+Camera\+Angle (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})}
+
+
+
+This method allows to change the angle of the position of the camera by inputting the said angle in degrees. 
+
+The angle can vary from 0 degrees to the value of {\bfseries{angle\+View\+Amplitude}} , 0 when the camera is facing the right side of the robot and the value of {\bfseries{angle\+View\+Amplitude}} when it is facing the left side. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The angle, in degrees, desired for the position of the camera. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing $<$/return$>$ 
+\end{DoxyReturn}
+\Hypertarget{classcamera_handler_a1cc57cabd17729a210b550c03e0867ec}\label{classcamera_handler_a1cc57cabd17729a210b550c03e0867ec} 
+\index{cameraHandler@{cameraHandler}!setCameraMovementEnabled@{setCameraMovementEnabled}}
+\index{setCameraMovementEnabled@{setCameraMovementEnabled}!cameraHandler@{cameraHandler}}
+\doxysubsubsection{\texorpdfstring{setCameraMovementEnabled()}{setCameraMovementEnabled()}}
+{\footnotesize\ttfamily void camera\+Handler.\+set\+Camera\+Movement\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+This methods allows to enable or disable the camera movement. When the camera movements are disabled the camera won\textquotesingle{}t be able to move using any of the two functions {\bfseries{set\+Camera\+Angle}} or {\bfseries{set\+Camera\+State}}, otherwise it will be possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & If value is set to true the camera\textquotesingle{}s movements will be enabled, if not they will be disabled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classcamera_handler_a4395f53ae5c8add6b9a9c063ddd0f2f4}\label{classcamera_handler_a4395f53ae5c8add6b9a9c063ddd0f2f4} 
+\index{cameraHandler@{cameraHandler}!setCameraState@{setCameraState}}
+\index{setCameraState@{setCameraState}!cameraHandler@{cameraHandler}}
+\doxysubsubsection{\texorpdfstring{setCameraState()}{setCameraState()}}
+{\footnotesize\ttfamily void camera\+Handler.\+set\+Camera\+State (\begin{DoxyParamCaption}\item[{int}]{camera\+State }\end{DoxyParamCaption})}
+
+
+
+This method allows to change the angle of the position of the camera only by inputting an integer number between 0 and the value of {\bfseries{ nb\+Camera\+State -\/ 1 }}. 
+
+For example if the value of {\bfseries{nb\+Camera\+State}} is 5 and the value of {\bfseries{angle\+View\+Amplitude}} is 180 then the camera will be positioned the following way depending on the input of the method\+: \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{camera\+State}} \textquotesingle{}s value   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ angle of position of the camera in degrees    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{camera\+State}} \textquotesingle{}s value   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ angle of position of the camera in degrees    }\\\cline{1-2}
+\endhead
+0   &0    \\\cline{1-2}
+1   &45    \\\cline{1-2}
+2   &90    \\\cline{1-2}
+3   &135    \\\cline{1-2}
+4   &180   \\\cline{1-2}
+\end{longtabu}
+Note that when the angle of position of the camera is 0 degrees then it will be facing the right side of the robot, when its value is 180 degrees it will be facing the left side of the robot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+State} & This value has to be included between 0 and {\bfseries{nb\+Camera\+State -\/ 1}} and will determine the camera\textquotesingle{}s position around the robot.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns nothing 
+\end{DoxyReturn}
+\Hypertarget{classcamera_handler_af05ef24096c0a92b8ea919ba016a2496}\label{classcamera_handler_af05ef24096c0a92b8ea919ba016a2496} 
+\index{cameraHandler@{cameraHandler}!Start@{Start}}
+\index{Start@{Start}!cameraHandler@{cameraHandler}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void camera\+Handler.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start is called before the first frame update. 
+
+--- Customizable camera parameters instantiation ---
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Unity projects/\+TCD Robot Gaze/\+Simulations/\+Robot Gaze/\+Assets/camera\+Handler.\+cs\end{DoxyCompactItemize}

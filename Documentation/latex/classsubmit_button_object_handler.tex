@@ -1,0 +1,126 @@
+\doxysection{submit\+Button\+Object\+Handler Class Reference}
+\hypertarget{classsubmit_button_object_handler}{}\label{classsubmit_button_object_handler}\index{submitButtonObjectHandler@{submitButtonObjectHandler}}
+
+
+Handles the submit button of the canvas used to select the object the robot is looking at This button is used to submit his answer. When no toggle button, representing the objects, have been selected the submit button is deactivated. It only becomes activated when a toggle button is selected.  
+
+
+Inheritance diagram for submit\+Button\+Object\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsubmit_button_object_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsubmit_button_object_handler_a529c77390c37fedfd434e206fec88339}{On\+Pointer\+Enter}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em This method is called when the mouse enters the area of the submit button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsubmit_button_object_handler_a0ca9affc7297dde2a87437d2084a7b39}{On\+Pointer\+Exit}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em This method is called when the mouse exits the area of the submit button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsubmit_button_object_handler_a3f6a4ae47c5af076644f7358cb8bf0e0}{toggle\+Button}} (bool value)
+\begin{DoxyCompactList}\small\item\em This method is called to activate or deactivate the submit button. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_object_handler_a042796a8efac64722f71774ea4fd8f76}\label{classsubmit_button_object_handler_a042796a8efac64722f71774ea4fd8f76} 
+void {\bfseries appear} ()
+\begin{DoxyCompactList}\small\item\em This method is called when the submit button appears on the screen. It is used to set the location of the loading rectangle and the state of the submit button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classsubmit_button_object_handler_ade9c1603d0c99227f2805d131b92f342}\label{classsubmit_button_object_handler_ade9c1603d0c99227f2805d131b92f342} 
+\mbox{\hyperlink{classobject_canvas_handler}{object\+Canvas\+Handler}} {\bfseries canvas\+Handler}
+\begin{DoxyCompactList}\small\item\em Instance of the class handling this canvas. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_object_handler_ad8b5e88573a78acbf70bb65f69ad169a}\label{classsubmit_button_object_handler_ad8b5e88573a78acbf70bb65f69ad169a} 
+Rect\+Transform {\bfseries loading\+Rectangle\+\_\+rect\+Transform}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Recttransform Game\+Object}} used to set the position of the loading blue rectangle that will be filling the submit button. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_object_handler_afcfa94a6aa607aa51ebc19ec08b28a72}\label{classsubmit_button_object_handler_afcfa94a6aa607aa51ebc19ec08b28a72} 
+Transform {\bfseries button\+\_\+transform}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Transform}} component of the submit button. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_object_handler_a6e57d82283e058c29f6f5db315050e29}\label{classsubmit_button_object_handler_a6e57d82283e058c29f6f5db315050e29} 
+Button {\bfseries submit\+Button}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Button}} component of the submit button. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_object_handler_a0e9da3fa28439add7691b00b5076d1a5}\label{classsubmit_button_object_handler_a0e9da3fa28439add7691b00b5076d1a5} 
+Text\+Mesh\+Pro\+UGUI {\bfseries submit\+Text}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Text\+Mesh\+Pro\+UGUI}} component containing the line that will be written on the submit button. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_object_handler_a20785283e4d46231bf5aaafbcd17822d}\label{classsubmit_button_object_handler_a20785283e4d46231bf5aaafbcd17822d} 
+Image {\bfseries submit\+Button\+Image}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Image}} component assigned to the {\bfseries{Submit Button Object Game\+Object}}. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_object_handler_a9d8ed68c9e21b75f9c6fb5c196182dd5}\label{classsubmit_button_object_handler_a9d8ed68c9e21b75f9c6fb5c196182dd5} 
+Vector2 {\bfseries anchored\+Position}
+\begin{DoxyCompactList}\small\item\em The position of the blue rectangle, representing the loading of the submit button, in the {\bfseries{Rect\+Transform}} \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_object_handler_aa2aca45e29c270a3a32ddde678d26960}\label{classsubmit_button_object_handler_aa2aca45e29c270a3a32ddde678d26960} 
+bool {\bfseries button\+Hovered}
+\begin{DoxyCompactList}\small\item\em The boolean indicating whether yes or no the button is hovered by the mouse. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_object_handler_a09e3ebab1203ca6c3fc85c1a3b6350c6}\label{classsubmit_button_object_handler_a09e3ebab1203ca6c3fc85c1a3b6350c6} 
+bool {\bfseries ready\+To\+Click}
+\begin{DoxyCompactList}\small\item\em The boolean indicating if the button is ready to be clicked. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_object_handler_ab627af4674158317f8b737eee4d3ad0f}\label{classsubmit_button_object_handler_ab627af4674158317f8b737eee4d3ad0f} 
+bool {\bfseries activated}
+\begin{DoxyCompactList}\small\item\em The boolean indicating whether yes or no the submit button should be activated depending on the states of the toggle buttons. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_object_handler_ae9c62b1203de9db9a760618eee9d476c}\label{classsubmit_button_object_handler_ae9c62b1203de9db9a760618eee9d476c} 
+bool {\bfseries loading\+Rectangle\+Enabled}
+\begin{DoxyCompactList}\small\item\em The boolean indicating if the loading\+Rectangle should be enabled or disabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classsubmit_button_object_handler_a57fe13bf345273077819f0b06d133ead}\label{classsubmit_button_object_handler_a57fe13bf345273077819f0b06d133ead} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\Hypertarget{classsubmit_button_object_handler_a999c552849ab70809868d9d903a97471}\label{classsubmit_button_object_handler_a999c552849ab70809868d9d903a97471} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the submit button of the canvas used to select the object the robot is looking at This button is used to submit his answer. When no toggle button, representing the objects, have been selected the submit button is deactivated. It only becomes activated when a toggle button is selected. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsubmit_button_object_handler_a529c77390c37fedfd434e206fec88339}\label{classsubmit_button_object_handler_a529c77390c37fedfd434e206fec88339} 
+\index{submitButtonObjectHandler@{submitButtonObjectHandler}!OnPointerEnter@{OnPointerEnter}}
+\index{OnPointerEnter@{OnPointerEnter}!submitButtonObjectHandler@{submitButtonObjectHandler}}
+\doxysubsubsection{\texorpdfstring{OnPointerEnter()}{OnPointerEnter()}}
+{\footnotesize\ttfamily void submit\+Button\+Object\+Handler.\+On\+Pointer\+Enter (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})}
+
+
+
+This method is called when the mouse enters the area of the submit button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Event payload associatied with pointer but it isn\textquotesingle{}t used in the method.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsubmit_button_object_handler_a0ca9affc7297dde2a87437d2084a7b39}\label{classsubmit_button_object_handler_a0ca9affc7297dde2a87437d2084a7b39} 
+\index{submitButtonObjectHandler@{submitButtonObjectHandler}!OnPointerExit@{OnPointerExit}}
+\index{OnPointerExit@{OnPointerExit}!submitButtonObjectHandler@{submitButtonObjectHandler}}
+\doxysubsubsection{\texorpdfstring{OnPointerExit()}{OnPointerExit()}}
+{\footnotesize\ttfamily void submit\+Button\+Object\+Handler.\+On\+Pointer\+Exit (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})}
+
+
+
+This method is called when the mouse exits the area of the submit button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Event payload associatied with pointer but it isn\textquotesingle{}t used in the method.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsubmit_button_object_handler_a3f6a4ae47c5af076644f7358cb8bf0e0}\label{classsubmit_button_object_handler_a3f6a4ae47c5af076644f7358cb8bf0e0} 
+\index{submitButtonObjectHandler@{submitButtonObjectHandler}!toggleButton@{toggleButton}}
+\index{toggleButton@{toggleButton}!submitButtonObjectHandler@{submitButtonObjectHandler}}
+\doxysubsubsection{\texorpdfstring{toggleButton()}{toggleButton()}}
+{\footnotesize\ttfamily void submit\+Button\+Object\+Handler.\+toggle\+Button (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+This method is called to activate or deactivate the submit button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & If it is set to true then the button will get activated, if not it will be deactivated.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Unity projects/\+TCD Robot Gaze/\+Simulations/\+Robot Gaze/\+Assets/submit\+Button\+Object\+Handler.\+cs\end{DoxyCompactItemize}

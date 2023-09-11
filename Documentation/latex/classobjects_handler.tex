@@ -1,0 +1,69 @@
+\doxysection{objects\+Handler Class Reference}
+\hypertarget{classobjects_handler}{}\label{classobjects_handler}\index{objectsHandler@{objectsHandler}}
+
+
+Handles the 7 different objects to which the robot will be looking at. Each object is designed as a cube composed of 6 faces that individually colored at the start of the simulation.  
+
+
+Inheritance diagram for objects\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classobjects_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classobjects_handler_a1c4e328296815160db9e596290805659}\label{classobjects_handler_a1c4e328296815160db9e596290805659} 
+Game\+Object {\bfseries robot}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Game\+Object}} component of the robot. \end{DoxyCompactList}\item 
+\Hypertarget{classobjects_handler_a6bf7e3bb1c3608475d57360c8e3a8851}\label{classobjects_handler_a6bf7e3bb1c3608475d57360c8e3a8851} 
+Transform {\bfseries robot\+\_\+transform}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Transform}} component of the robot. \end{DoxyCompactList}\item 
+\Hypertarget{classobjects_handler_af59dcea45b92988074267e88e2e873ca}\label{classobjects_handler_af59dcea45b92988074267e88e2e873ca} 
+Transform {\bfseries current\+Face\+\_\+transform}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Transform}} component of the specific object that is being placed. \end{DoxyCompactList}\item 
+\Hypertarget{classobjects_handler_a05f946f7ad51abff8817958121219856}\label{classobjects_handler_a05f946f7ad51abff8817958121219856} 
+Transform {\bfseries parent\+\_\+transform}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Transform}} component of the {\bfseries{Game\+Object}} containing the list of the 7 objects. \end{DoxyCompactList}\item 
+\Hypertarget{classobjects_handler_aef4cd2a1f1d49d3e522a12e9ee981d4c}\label{classobjects_handler_aef4cd2a1f1d49d3e522a12e9ee981d4c} 
+Material {\bfseries current\+Face\+\_\+material}
+\begin{DoxyCompactList}\small\item\em The {\bfseries{Material}} component of the current face of the current object that is being colored. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classobjects_handler_a90aaf368bbe7aaa6d72c977875258de3}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\Hypertarget{classobjects_handler_ab48dd001626c40fb4df4c552ff005014}\label{classobjects_handler_ab48dd001626c40fb4df4c552ff005014} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classobjects_handler_ae32ee2c478554aa5f6e2f18e5d0799aa}\label{classobjects_handler_ae32ee2c478554aa5f6e2f18e5d0799aa} 
+float {\bfseries angle\+Amplitude}
+\begin{DoxyCompactList}\small\item\em The amplitude for the angles of the positions of the objects relatively to the robot. \end{DoxyCompactList}\item 
+\Hypertarget{classobjects_handler_a61f52fc36fc21fc5436cac4eef3d9415}\label{classobjects_handler_a61f52fc36fc21fc5436cac4eef3d9415} 
+float {\bfseries object\+Distance}
+\begin{DoxyCompactList}\small\item\em The distance between the objects and the robot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the 7 different objects to which the robot will be looking at. Each object is designed as a cube composed of 6 faces that individually colored at the start of the simulation. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classobjects_handler_a90aaf368bbe7aaa6d72c977875258de3}\label{classobjects_handler_a90aaf368bbe7aaa6d72c977875258de3} 
+\index{objectsHandler@{objectsHandler}!Start@{Start}}
+\index{Start@{Start}!objectsHandler@{objectsHandler}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void objects\+Handler.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start is called before the first frame update. 
+
+--- Customizable camera parameters instantiation ---
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Unity projects/\+TCD Robot Gaze/\+Simulations/\+Robot Gaze/\+Assets/objects\+Handler.\+cs\end{DoxyCompactItemize}
